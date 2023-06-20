@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>마법같은 블록구문 이벤트</title>
+  <link rel="stylesheet" href="../../css/event/visangEvent04.css">
+</head>
+<body>
+	<!-- eventWrap -->
+	<div id="eventWrap">
+		<div class="top_menu">
+			<div class="logo">
+				<img src="../../img/event/visangEvent04/logo.png" alt="비상">
+			</div>
+			<div class="menu">
+				<div id="divLogIn">
+					<a href="javascript:void(0)" onclick="btnLogIn_Click" class="login">로그인</a><a href="javascript:void(0)" class="join">회원가입</a>
+				</div>
+				<div id="divLogOut" style="display:none">
+					<a href="javascript:void(0)" onclick="btnLogOut_Click" class="logout">로그아웃</a><a href="javascript:void(0)" class="modify">개인정보수정</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 2021년 6월 16일 ~ 6월 30일까지 오픈 / 2021년 7월 12일 ~ 9월 5일까지 히든 -->
+		<div class="area-00">
+			<div class="wrap">
+				<div class="blind">
+					<p>마법같은 블록구문 X 전홀철 강사가 만났다!</p>
+					<h1>마법같은 블록구문 성적 향상 챌린저 모집</h1>
+					<p>마법같은 블록구문 성적 향상 챌린저에게 <strong>교재와 강의가 100% 무료!</strong></p>
+					<p>마법같은 블록구문 필수편 + 전홀철 선생님 바른 해석 강의(바른 해석 강의 무료 수강권 91,000원 상당)</p>
+					<dl>
+						<dt>모집 기간</dt>
+						<dd>2021.06.16.(수) ~ 06.30.(수)</dd>
+						<dt>발표일</dt>
+						<dd>2021.07.07.(수)</dd>
+					</dl>
+					<h2>모집 요강</h2>
+					<dl>
+						<dt>모집 기간</dt>
+						<dd>2021년 6월 16일(수) ~ 6월 30일(수)</dd>
+						<dt>모집 대상</dt>
+						<dd>고1 ~고3 (총 30명)</dd>
+						<dt>지원 자격</dt>
+						<dd>
+							여름 방학에 열공하여 9월 모의고사 영어 성적 올릴 고등학생
+						</dd>
+						<dt>발표일</dt>
+						<dd>
+							2021년 7월 7일(금)
+						</dd>
+						<dt>활동 기간</dt>
+						<dd>
+							2021년 7월 12일(월) ~ 9월 5일(일) / 8주
+						</dd>
+						<dt>활동 내역</dt>
+						<dd>
+							(1) 마법같은 블록구문 교재와 강의로 공부하는 모습을 찍어서 SNS와 기출비 카페에 업로드!<br>
+							(2) 9월 영어 모의고사 후기 작성 (성적 향상을 인증하면 우수 챌린저가 될 확률 UP!)
+						</dd>
+						<dt>활동 혜택</dt>
+						<dd>
+							1. 마법같은 블록구문 필수편 교재<br>
+							2. 이투스 전홍철 선생님 바른 해석 강의 *(마법같은 블록구문 필수편강의)<br> 
+							3. 활동 혜택(미션 횟수에 따른 모바일 기프티콘 증정)<br> 
+							4. 우수 챌린저 장학금 시상
+							<table>
+								<tbody>
+									<tr>
+										<th scope="row">
+											최우수상(1명)
+										</th>
+										<td>
+											20만원
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											우수상(1명)
+										</th>
+										<td>
+											10만원
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+					<p>
+						꼭 알아두세요!<br>
+						마법같은 블록구문 성정향상 챌린지에 선정된 후 활동을 하지 않을 시, 추후 진행되는 비상교재 이벤트 당첨에 불이익이 있을 수 있습니다.<br>
+						※ 5만원 초과의 경품의 경우, 상품 금액의 22%은 본인 부담입니다.
+					</p>
+				</div>
+				<div class="btn_apply">
+					<a href="http://naver.me/Fvnr3NsU" target="_blank"><img src="../../img/event/visangEvent04/btn_apply.png" alt="신청하기"></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 2021년 6월 16일 ~ 7월 11일까지 히든 / 2021년 7월 12일 ~ 9월 5일까지 오픈 -->
+		<div class="area-01">
+			<div class="wrap">
+				<div class="blind">
+					<p>마법같은 블록구문 X 전홍철 강사가 만났다!</p>
+					<h1>마법같은 블록구문 성적향상 챌린저 활동</h1>
+					<h2>마법같은 블록구문 성적 향성 챌린지 <strong>미션 등록 방법 안내</strong></h2>
+					<p>필수 해시태그 #비상교육 #마법같은블록구문 #영어구문서 #영어공부 #수능영어</p>
+					<ol>
+						<li>마법같은 블록구문 교재와 강의로 공부하는 인증샷 찍기</li>
+						<li>개인 SNS와 기출비 카페 각각 1번씩, 총 2번 공부 인증 업로드하기</li>
+						<li>업로드한 SNS 게시글의 URL을 복사하기</li>
+						<li>아래 챌린지 미션란에 URL 붙여넣고 등록하기</li>
+					</ol>
+					<h2>만렙드림챌린지 월간 미션 참여 방법</h2>
+					<p>온라인 그룹스터디 참여하고 인증하기(총 2회)* 참여 방법은 추후 별도 안내 예정</p>
+					<dl>
+						<dt>활동 기간</dt>
+						<dd>
+							2021.07.05.(월) ~ 2021.08.29.(일)
+						</dd>
+						<dt>우수활동 챌린저 발표일</dt>
+						<dd>
+							2021.09.06.(월)
+						</dd>
+					</dl>
+				</div>
+				<a class="btnCafeGo" href="https://cafe.naver.com/michiexam" target="_blank"><span class="blind">기출비 카페 바로가기</span></a>
+			</div>
+		</div>
+
+		<div class="area-02">
+			<div class="wrap">
+				<div class="blind">
+					<h2>마법같은 블록구문 성적 향상 챌린지 미션 URL 등록하기</h2>
+					<p>※ 공부 인증샷 게시물 URL을 복사하여 붙여 넣기</p>
+				</div>
+
+				<div class="txt_entry">
+					<input type="text" name="" id="" class="i_txt" value="http://">
+					<div class="btn_entry">
+						<a href="https://book7.visang.com/eventDtl/e210616.html#"><img src="../../img/event/visangEvent04/btn_entry.png" alt="등록하기"></a>
+					</div>
+				</div>
+
+				<div class="calender_wrap">
+					<div class="top">
+						<div class="count_box">
+							<p class="blind">이번 달 나의 챌린지 완료일수</p>
+							<strong class="count">30</strong>일
+						</div>
+						<div class="month">
+							<a href="javascript:void(0);" class="prev disabled"><span class="blind">이전 달</span></a>
+							<strong>2021</strong>년 <strong id="stoMon">7</strong>월
+							<a href="javascript:void(0);" class="next"><span class="blind">다음 달</span></a>
+						</div>
+					</div>
+					<table class="calender">
+						<caption>만렙 챌린지 달력</caption>
+						<colgroup>
+							<col style="width: 14.285%;">
+							<col style="width: 14.285%;">
+							<col style="width: 14.285%;">
+							<col style="width: 14.285%;">
+							<col style="width: 14.285%;">
+							<col style="width: 14.285%;">
+							<col style="width: auto;">
+						</colgroup>
+
+						<!-- 활동 기간 참고: 7월: 07.12.(월) ~ 08.01.(일) -->
+						<tbody id="divMonth7">
+							<tr>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div class="none">1</div></td>
+								<td><div class="none">2</div></td>
+								<td class="sat"><div class="none">3</div></td>
+								<td class="sun"><div class="none">4</div></td>
+							</tr>
+							<tr>
+								<td><div class="none">5</div></td>
+								<td><div class="none">6</div></td>
+								<td><div class="none">7</div></td>
+								<td><div class="none">8</div></td>
+								<td><div class="none">9</div></td>
+								<td class="sat"><div class="none">10</div></td>
+								<td class="sun"><div class="none">11</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210712">12</div></td>
+								<td><div id="div20210713">13</div></td>
+								<td><div id="div20210714">14</div></td>
+								<td><div id="div20210715">15</div></td>
+								<td><div id="div20210716">16</div></td>
+								<td class="sat"><div id="div20210717">17</div></td>
+								<td class="sun"><div id="div20210718">18</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210719">19</div></td>
+								<td><div id="div20210720">20</div></td>
+								<td><div id="div20210721">21</div></td>
+								<td><div id="div20210722">22</div></td>
+								<td><div id="div20210723">23</div></td>
+								<td class="sat"><div id="div20210724">24</div></td>
+								<td class="sun"><div id="div20210725">25</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210726">26</div></td>
+								<td><div id="div20210727">27</div></td>
+								<td><div id="div20210728">28 <span class="stamp"><img src="../../img/event/visangEvent04/stamp.png" alt="마법같은 성적향상 미션완료"></span></div></td>
+								<td><div id="div20210729">29</div></td>
+								<td><div id="div20210730">30</div></td>
+								<td class="sat"><div id="div20210731">31</div></td>
+								<td class="sun"><div id="div20210801">1</div></td>
+							</tr>
+						</tbody>
+
+						<!-- 활동 기간 참고: 8월: 08.02.(월) ~ 08.29.(일) -->
+						<tbody id="divMonth8">
+							<tr>
+								<td><div id="div20210802">2</div></td>
+								<td><div id="div20210803">3</div></td>
+								<td><div id="div20210804">4</div></td>
+								<td><div id="div20210805">5</div></td>
+								<td><div id="div20210806">6</div></td>
+								<td class="sat"><div id="div20210807">7</div></td>
+								<td class="sun"><div id="div20210808">8</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210809">9</div></td>
+								<td><div id="div20210810">10</div></td>
+								<td><div id="div20210811">11</div></td>
+								<td><div id="div20210812">12</div></td>
+								<td><div id="div20210813">13 <span class="stamp"><img src="../../img/event/visangEvent04/stamp.png" alt="마법같은 성적향상 미션완료"></span></div></td>
+								<td class="sat"><div id="div20210814">14</div></td>
+								<td class="sun"><div id="div20210815">15</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210816">16</div></td>
+								<td><div id="div20210817">17 <span class="stamp"><img src="../../img/event/visangEvent04/stamp.png" alt="마법같은 성적향상 미션완료"></span></div></td>
+								<td><div id="div20210818">18</div></td>
+								<td><div id="div20210819">19</div></td>
+								<td><div id="div20210820">20</div></td>
+								<td class="sat"><div id="div20210821">21</div></td>
+								<td class="sun"><div id="div20210822">22</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210823">23</div></td>
+								<td><div id="div20210824">24</div></td>
+								<td><div id="div20210825">25</div></td>
+								<td><div id="div20210826">26</div></td>
+								<td><div id="div20210827">27</div></td>
+								<td class="sat"><div id="div20210828">28</div></td>
+								<td class="sun"><div id="div20210829">29</div></td>
+							</tr>
+							<tr>
+								<td><div id="div20210830">30</div></td>
+								<td><div id="div20210831">31</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td class="sat"><div class="none">&nbsp;</div></td>
+								<td class="sun"><div class="none">&nbsp;</div></td>
+							</tr>
+						</tbody>
+					
+					<!-- 활동 기간 참고: 8월: 08.30.(월) ~ 09.05.(일) -->
+						<tbody id="divMonth9">
+							<tr>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td><div id="div20210901">1</div></td>
+								<td><div id="div20210902">2</div></td>
+								<td><div id="div20210903">3</div></td>
+								<td class="sat"><div id="div20210904">4</div></td>
+								<td class="sun"><div id="div20210905">5</div></td>
+							</tr>
+							<tr>
+								<td><div class="none">6</div></td>
+								<td><div class="none">7</div></td>
+								<td><div class="none">8</div></td>
+								<td><div class="none">9</div></td>
+								<td><div class="none">10</div></td>
+								<td class="sat"><div class="none">11</div></td>
+								<td class="sun"><div class="none">12</div></td>
+							</tr>
+							<tr>
+								<td><div class="none">13</div></td>
+								<td><div class="none">14</div></td>
+								<td><div class="none">15</div></td>
+								<td><div class="none">16</div></td>
+								<td><div class="none">17</div></td>
+								<td class="sat"><div class="none">18</div></td>
+								<td class="sun"><div class="none">19</div></td>
+							</tr>
+							<tr>
+								<td><div class="none">20</div></td>
+								<td><div class="none">21</div></td>
+								<td><div class="none">22</div></td>
+								<td><div class="none">23</div></td>
+								<td><div class="none">24</div></td>
+								<td class="sat"><div class="none">25</div></td>
+								<td class="sun"><div class="none">26</div></td>
+							</tr>
+							<tr>
+								<td><div class="none">27</div></td>
+								<td><div class="none">28</div></td>
+								<td><div class="none">29</div></td>
+								<td><div class="none">30</div></td>
+								<td><div class="none">&nbsp;</div></td>
+								<td class="sat"><div class="none">&nbsp;</div></td>
+								<td class="sun"><div class="none">&nbsp;</div></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<dl>
+						<dt class="blind">주차별 미션 현황</dt>
+						<dd><img src="../../img/event/visangEvent04/mission_00.png" alt="미션 대기중"></dd>
+						<dd><img src="../../img/event/visangEvent04/mission_01.png" alt="미션 수행중"></dd>
+						<dd><img src="../../img/event/visangEvent04/mission_02.png" alt="미션 완료"></dd>
+						<dd><img src="../../img/event/visangEvent04/mission_03.png" alt="미션 실패"></dd>
+						<dd><img src="../../img/event/visangEvent04/mission_03.png" alt="미션 실패"></dd>
+					</dl>
+
+					<p class="blind">
+						※ SNS, 기출비 인증샷 게시물의 URL을 등록한 날짜에 도장이 찍혀요.<br>
+						※ 미션 등록을 했지만, 무성의하게 작성한 콘텐츠는 미션 인정이 되지 않을 수 있습니다.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-03">
+			<div class="wrap">
+				<h2 class="blind">만렙 드림 챌린지 미션 완료 혜택</h2>
+				<div class="tab_gift">
+					<ul class="tab">
+						<li class="tab1 clsGift gift7 on"><a href="javascript:fnSelectGift(7);"><span class="blind">7월</span></a></li>
+						<li class="tab2 clsGift gift8"><a href="javascript:fnSelectGift(8);"><span class="blind">8월</span></a></li>
+					</ul>
+					<ul class="tab_cont">
+						<li class="clsGift gift7 on">
+							<img src="../../img/event/visangEvent04/gift.jpg" alt="">
+							<div class="blind">
+								<strong>1주~4주차(7월 12일 ~ 8월 8일)</strong>
+								<p>4회 미션 완료 : BHC 뿌링클 치킨</p>
+								<p>3회 미션 완료 : 베스킨라빈스 쿼터 아이스크림</p>
+								<p>2회 미션 완료 : 설빙 인절미 설빙</p>
+								<p>1회 미션 완료 : 공차 블랙밀크티 + 펄I</p>
+								<span>* 미션 완료 회수에 따라 경품이 증정됩니다.</span>
+							</div>
+						</li>
+						<li class="clsGift gift8">
+							<img src="../../img/event/visangEvent04/gift2.jpg" alt="">
+							<div class="blind">
+								<strong>5주~8주차(8월 9일 ~ 9월 5일)</strong>
+								<p>4회 미션 완료 : 문화상품권 2만원권</p>
+								<p>3회 미션 완료 : 설빙 시험찰싹 인절미세트</p>
+								<p>2회 미션 완료 : 버거킹 와퍼 세트</p>
+								<p>1회 미션 완료 : 베스킨라빈스 싱글킹 아이스크림</p>
+								<span>* 미션 완료 회수에 따라 경품이 증정됩니다.</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="blind">
+					<h2>활동 우수 챌린저 혜택</h2>
+					<dl>
+						<dt>최우수상(1명)</dt>
+						<dd>20만원</dd>
+						<dt>우수상(1명)</dt>
+						<dd>10만원</dd>
+					</dl>
+					<h2>꼭 읽어주세요!</h2>
+					<ul>
+						<li>1회 미션은 각 주마다 SNS와 네이버 기출비 카페에 각각 1번씩, 총 2번 공부 인증하는 것입니다.</li>
+						<li>~7주 차에는 공부 인증을, 8주 차에는 &lt;마법같은 블록구문&gt;으로 공부한 후 9월 영어 모의고사 후기를 올리는 것이 미션입니다.<br>9월 1주차 미션으로 마법같은 블록구문으로 공부한 후 6월 모의고사에 비해 9월 영어 모의고사 성적이 향상된 것을 후기로 작성해 주시면, 우수 챌린저로 뽑힐 확률이 높아집니다.</li>
+						<li>주차, 8주차 활동이 끝난 후에 미션 완료 횟수를 확인해 8월 둘째 주와 9월 셋째 주에 경품 발송 예정입니다.<br>(※챌린저 신청 때 기입한 휴대전화번호로 발송됩니다.)</li>
+						<li>교재를 수령한 후 챌린저 활동을 하지 않을 시, 추후 진행되는 비상교재 이벤트 당첨에 불이익이 있을 수 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-04">
+			<div class="wrap">
+				<div class="blind">
+					<p><strong>마법같은 블록구문</strong>을 풀면, 마법같이 영어 성적이 오른다!</p>
+					<ul>
+						<li>기본편 (중3~고1): 자주 출제되는 햑심 구문으로 영문법·구문 기초 확립하기</li>
+						<li>필수편 (고1~고3): 최신·고전 명문장을 통한 필수 구문 학습으로 내신과 수능 1등급 동시에 완성하기</li>
+						<li>실전편 (고2~고3): 수능에 최적화된 문장과 구문 학습법으로 실전 감각 다지기</li>
+					</ul>
+					<ul>
+						<li>모든 문장을 성분과 의미 단위로 컬러화<strong> → 직관적 · 경제적 · 과학적으로 영어 구문 학습!</strong></li>
+						<li>정교하게 설계된 3단계의 낫너형 학습 과정<strong> → 끝까지 포기하지 않고 영어 독해 실력 다지기!</strong></li>
+						<li>엄선된 고전·최신 주제, 수능 기출 문장<strong> → 내신, 수능, 실력, 교양의 4마리 토끼를 한 번에!</strong></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-05">
+			<div class="wrap">
+				<div class="blind">
+					<h2>비상교재 이벤트 만족도 조사</h2>
+					<p>본 이벤트의 경품, 참여 방법, 디자인 등 전반적인 만족도를 평가해주세요.</p>
+				</div>
+				<div class="estimation">
+					<div class="score_wrap">
+						<span class="score">
+							<a href="#a"><span class="blind">5</span></a>
+							<a href="#a"><span class="blind">4</span></a>
+							<a href="#a"><span class="blind">3</span></a>
+							<a href="#a"><span class="blind">2</span></a>
+							<a href="#a"><span class="blind">1</span></a>
+						</span>
+					</div>
+					<input type="text" name="" id="" class="i_txt" value="평가 이유 및 건의 사항을 작성해주세요. (30자 이내)">
+					<div class="btn">
+						<a href="#a"><img src="../../img/event/visangEvent04/btn_estimation.png" alt="평가하기"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-info">
+			<div class="wrap">
+				<div class="blind">
+					<h2>꼭 알아두세요!</h2>
+					<ul>
+						<li>개인정보가 확인되지 않는 경우 당첨이 취소될 수 있습니다.</li>
+						<li>동일한 개인정보로 당첨되었을 경우 당첨이 취소될 수 있습니다.</li>
+						<li>개인정보가 변경되어 받지 못한 경품은 재발송 되지 않습니다.</li>
+						<li>본 이벤트는 PC 및 모바일 모두 참여 가능합니다.</li>
+					</ul>
+				</div>
+				<a href="#a" class="btn_privacy" target="_blank" title="새창열기"><span class="blind">개인정보확인</span></a>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer_inner">
+				<ul>
+					<li><a href="http://www.visang.com/" target="_blank">회사소개</a><span>|</span></li>
+					<li><a href="https://book.visang.com/customer/newsretrieve.aspx" target="_blank">고객센터</a><span>|</span></li>
+					<li><a href="https://book.visang.com/etc/sitemap.aspx" target="_blank">사이트맵</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/customer/contactus.aspx" target="_blank">오시는길</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/customer/subcompretrieve.aspx" target="_blank">지사안내</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/member/privacy.aspx" target="_blank" class="privacy"><strong>개인정보처리방침</strong></a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/member/agreement.aspx" target="_blank">이용약관</a></li>
+				</ul>
+				<p class="addr">(주)비상교육 | 주소 : 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 20층 | 대표자명 : 양태회<br>사업자등록번호 : 211-87-07735 | 통신판매업 신고번호 : 제 2006-02731호 | TEL : 1544-0554 | FAX : (02) 6970-6148<br>대표메일 : webmaster@visang.com</p>
+				<p class="copyright">Copyright ⓒ 비상교육. ALL rights reserved. <a href="#a" class="btn_myinfo" target="_blank">정보조회</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //eventWrap -->
+</body>
+</html>

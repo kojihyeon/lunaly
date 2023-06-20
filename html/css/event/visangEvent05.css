@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+
+* {margin:0;padding:0;}
+body {min-width:1000px;color:#333;font-size:12px;font-family:Malgun Gothic,맑은 고딕,dotum,돋움, Segoe, sans-serif;}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0;padding:0}
+ul,li,ol {list-style:none;}
+img {border:0;vertical-align:middle;}
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+input, textarea, a {font-size:12px;font-family:Malgun Gothic,맑은 고딕,dotum,돋움, Segoe, sans-serif;}
+legend {position:absolute;font-size:0;line-height:0;overflow:hidden;visibility:hidden;} 
+fieldset, button {vertical-align:middle;border:0;}
+caption {text-indent:-100%;*text-indent:0;white-space:nowrap;overflow:hidden;font-size:0;line-height:0;color:transparent;}
+.blind {position:absolute;top:-9999px;text-indent:-100%;font-size:0;line-height:0;}
+.clfix {*zoom:1}
+.clfix:after {content:"";display:block;clear:both;}
+a {color:#333;text-decoration:none;}
+
+/* 공통 */
+#eventWrap .top_menu {position:relative;width:1400px;margin:0 auto;z-index:10;}
+#eventWrap .top_menu .logo {position:absolute;top:70px;right:0;}
+#eventWrap .top_menu .menu {position:absolute;top:73px;right:138px;height:19px;text-align:center;padding:3px 10px 0 10px;border-radius:11px}
+#eventWrap .top_menu .menu a {display:inline-block;line-height:12px;padding: 0 7px;font-size:12px;color:#FFF;}
+#eventWrap .top_menu .menu a:first-child {border-right:1px solid #FFF;}
+
+#footer {background:#666666;}
+#footer .footer_inner {width:900px;margin:0 auto;color:#222;padding:20px 0 20px 100px;letter-spacing:-0.032em;font-weight:bold;}
+#footer .footer_inner ul {*zoom:1;}
+#footer .footer_inner ul:after {content:"";display:block;clear:both;}
+#footer .footer_inner ul li {float:left;margin-right:18px;}
+#footer .footer_inner ul li a {display:inline-block;padding:5px;font-weight:bold;color:#fff;}
+#footer .footer_inner ul li a.privacy {color:#ead572;}
+#footer .footer_inner ul li span {display:inline-block;margin-left:18px;color:#ccc}
+#footer .footer_inner p {padding-left:5px;font-weight:normal;color:#b5b5b5;}
+#footer .footer_inner p.copyright {font-weight:bold;color:#858585;}
+#footer .footer_inner .addr {margin:25px 0 15px}
+#footer .footer_inner .btn_myinfo {display:inline-block;width:52px;height:16px;background:url('../../img/event/visangEvent05/btn_myinfo.png') no-repeat 0 0;text-indent:-1000px;font-size:0;line-height:0;vertical-align:middle;}
+
+.wrap {position:relative;margin:0 auto;width:1000px}
+/* //공통 */
+
+/* START */
+.area-01 {background:url('../../img/event/visangEvent05/bg_cont01.jpg') 50% 0 no-repeat #ffea76;}
+.area-01 .wrap {height:1376px;}
+.area-02{background:url('../../img/event/visangEvent05/bg_cont02.jpg') 50% 0 no-repeat #FFF;}
+.area-02 .wrap {height:835px;}
+.area-03 {background:url('../../img/event/visangEvent05/bg_cont03.jpg') 50% 0 no-repeat #eaf9ff;}
+.area-03 .wrap {height:803px;}
+.area-04 {background:url('../../img/event/visangEvent05/bg_cont04.jpg') 50% 0 no-repeat #fff9a6;}
+.area-04 .wrap {height:1143px;}
+
+.tabBtnWrap {position:absolute;top:220px;left:50px;font-family:'noto sans KR', sans-serif;}
+.tabBtnWrap:after {display:block;content:"";clear:both;}
+.tabBtnWrap li {float:left;}
+.tabBtnWrap li + li {margin-left:12px;}
+.tabBtnWrap li a {display:block;width:140px;height:60px;border-radius:30px;border:3px solid #002b85;box-sizing:border-box;font-size:28px;font-weight:bold;text-align:center;line-height:54px;letter-spacing:-0.5px;color:#002b85;background:#FFF;font-family:'noto sans KR', sans-serif;}
+.tabBtnWrap li.on a {background:#154fd5;color:#FFF;}
+.tabConWrap {display:none;position:absolute;top:320px;left:0;}
+.tabConWrap table {width:1000px;font-family:'noto sans KR', sans-serif;letter-spacing:-0.5px;border-bottom:2px solid #002b85;}
+.tabConWrap table thead th {width:165.8px;height:90px;background:#002b85;font-size:22px;font-weight:bold;color:#FFF;}
+.tabConWrap table thead th + th {border-left:1px solid #001f5e;}
+.tabConWrap table tbody tr + tr {border-top:1px solid #b5b5b5;}
+.tabConWrap table tbody td + td {border-left:1px solid #b5b5b5;}
+.tabConWrap table tbody th {background:#eaf9ff;font-size:22px;font-weight:bold;color:#002b85;border-right:1px solid #b5b5b5;}
+.tabConWrap table tbody td {width:165.8px;height:150px;font-size:24px;font-weight:500;color:#323232;text-align:center;}
+.tabConWrap table tbody td a {display:block;margin-top:5px;}
+
+.btnWrap {position:absolute;left:0;right:0;bottom:120px;text-align:center;}
+.btnUrl {position:absolute;left:487px;top:270px;}
+
+.area-info {background:url('../../img/event/visangEvent05/bg_info.jpg') 50% 0 no-repeat #FFF;}
+.area-info .wrap{height:293px;}
+.area-info .btnPrivacy{position:absolute;top:50px;right:275px;}

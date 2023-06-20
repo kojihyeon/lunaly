@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>초등 수학 디지털 교구 | 비바샘</title>
+	<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="/js/teachware/common.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="/css/common2.css">
+	<link rel="stylesheet" type="text/css" href="/css/nanumgothic.css">
+	<link rel="stylesheet" type="text/css" href="/css/teachware/teachware.css">
+</head>
+<body>
+<div id="wrapper" class="teachwareSub">
+	<header id="headerSub">
+		<div class="container">
+			<div class="util">
+				<a href="util_guide.html" class="guide">이용안내</a>
+				<a href="class_data.html" class="classroom">수업 자료실</a>
+			</div>
+			<h1><a href="main.html"><img src="/images/logo/logo_teachware.png" alt="초등 수학 디지털 교구"></a></h1>
+			<h2><a href="/" target="_blank"><img src="/images/logo/link_vivasam.png" alt="비바샘 로고"></a></h2>
+			<!--로그인 전
+			<div class="login">
+				<form action="">
+					<ul>
+						<li><input type="text" name="userId" id="userId" value="" style="ime-mode:disabled;" placeholder="아이디" title="아이디"></li>
+						<li><input type="password" name="userPwd" id="userPwd" value="" placeholder="비밀번호" title="비밀번호"></li>
+						<li><a href="#" id="loginBtn">로그인</a></li>
+					</ul>
+				</form>
+			</div>-->
+			<!--//로그인 전-->
+			<!--로그인 후-->
+			<div class="logout">
+				<span class="name">비바샘2</span><span class="teacher">선생님</span><button>로그아웃</button>
+			</div>
+			<!--//로그인 후-->
+		</div>
+	</header>
+	<div id="ContentSub">
+		<div class="navWrap">
+			<div class="container">
+				<nav>
+					<ul class="tab1">
+						<!-- 리스트가 1개 일 때 -->
+						<li><a href="#">3학년</a></li>
+						<!-- 리스트가 2개이상 일 때 -->
+						<li><a href="#">1학기<button class="navTabDown"></button></a>
+							<ul class="tab2">
+								<li><a class="tabOn" href="#">1학기</a></li>
+								<li><a href="#">2학기</a></li>
+							</ul>
+						</li>
+						<li><a href="#">1. 덧셈과 뺄셈<button class="navTabDown"></button></a>
+							<ul class="tab2">
+								<li><a class="tabOn" href="#">1. 덧셈</a></li>
+								<li><a href="#">2. 길이와 시간</a></li>
+								<li><a href="#">3. 그림 그래프</a></li>
+							</ul>
+						</li>
+						<li><a href="#">수모형<button class="navTabDown"></button></a>
+							<ul class="tab2">
+								<li><a class="tabOn" href="#">수모형</a></li>
+								<li><a href="#">수모형과 세로셈</a></li>
+								<li><a href="#">세로셈</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<!--<img class="subQR" src="/images/teachware/sub_qr.png" alt="Qr코드"> 앱출시 이후 실제QR코드로 변경 예정-->
+			</div>
+		</div>
+		<div class="subConWrap">
+			<div class="container">
+				<div class="conts">
+					<a class="btnFull" href="#"><img src="/images/teachware/btn_full.png" alt="전체화면"></a>
+					<div class="conTollWrap">
+						<!-- 콘텐츠 영상은 .conToll 안에 삽입 -->
+						<div class="conToll"></div>
+						<!-- 익스화면에서 콘텐츠 지원 안할 때 사용 -->
+						<div class="exCont">
+							<h3>죄송합니다.</h3>
+							<p>초등 수학 디지털 교구 테마관 콘텐츠는<br>PC 환경의  <a title="새창열림" href="//google.com/chrome" target="_blank" rel="noopener noreferrer">크롬 브라우저</a>로<br>이용하실 수 있습니다.
+							</p>
+						</div>
+					</div>
+					<div class="btnWrap">
+						<a class="btnInst" href="#"><img src="/images/teachware/btn_dn_instruction.png" alt="수업지도안"></a>
+						<a class="btnAct" href="#"><img src="/images/teachware/btn_dn_activity.png" alt="활동지"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="subChasi">
+		 <div class="container">
+			<h3>관련 차시 자료</h3>
+			<table width="1120">
+				<colgroup>
+					<col width="170px">
+					<col>
+				</colgroup>
+				<tbody>
+					<!--tr하나 추가 시  td rowspan 숫자를 tr갯수만큼 맞춰주세요.-->
+					<tr>
+						<td rowspan="" class="chasiDan">1. 덧셈과 뺄셈</td>
+						<td><span>[1차시]1단원 도입(1) (수10~11p, 수익6~7p)</span><a href="#"><img src="/images/teachware/btn_chasi.png" alt="차시열기"></a></td>
+					</tr>
+				</tbody>
+			</table>
+		 </div>
+		</div>
+	</div>
+	<footer id="footerTeachware">
+		<div class="container">
+			<div class="logo"><span class="blind">비상</span></div>
+			<ul class="link">
+				<li><a href="/member/term.do" target="_blank" title="새창열림">서비스 이용약관</a></li>
+				<li><a href="/member/privacy.do" target="_blank" title="새창열림">개인정보 처리방침</a></li>
+			</ul>
+			<ul class="info">
+				<li><span>㈜비상교육주소: 서울특별시 구로구 디지털로33길 48 대룡포스트타워 7차 20층</span> <span>TEL : 1544-7714</span> <span>MAIL : <a href="mailto:vivasam@visang.com">vivasam@visang.com</a></span> <span>대표자명 : 양태회 사업자등록번호 : 211-87-07735</span></li>
+				<li class="copyright">COPYRIGHT BY ㈜비상교육 ALL RIGHTS RESERVED</li>
+			</ul>
+		</div>
+	</footer>
+</div><!-- //#wapper -->
+
+<!--팝업-->
+<div class="dim"></div>
+<!--활동지 팝업-->
+<div id="popupSub">
+	<div class="popAct">
+		<div class="popTop">
+			<h1>활동지 미리보기</h1>
+			<p>현직 초등학교 선생님께서 직접 개발하신 활동지입니다.</p>
+			<a class="btnClose" href="#"><img src="/images/teachware/popClose.png" alt="닫기"></a>
+		</div>
+		<div class="popCon">
+			<a class="popDown" href="#"><img src="/images/teachware/btn_download.png" alt="다운로드"></a>
+			<div class="popConImg">
+				<!--이 이미지는 샘플입니다.-->
+				<img src="/images/teachware/data/popactimg1.jpg" alt="샘플">
+			</div>
+		</div>
+	</div>
+</div>
+<!--수업지도안 팝업-->
+<div id="popupSub">
+	<div class="popInst">
+		<div class="popTop">
+			<h1>수업지도안 미리보기</h1>
+			<p>현직 초등학교 선생님께서 직접 개발하신 수업 지도안입니다.</p>
+			<a class="btnClose" href="#"><img src="/images/teachware/popClose.png" alt="닫기"></a>
+		</div>
+		<div class="popCon">
+			<a class="popDown" href="#"><img src="/images/teachware/btn_download.png" alt="다운로드"></a>
+			<div class="popConImg">
+				<!--이 이미지는 샘플입니다.-->
+				<img src="/images/teachware/data/popactimg1.jpg" alt="샘플">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

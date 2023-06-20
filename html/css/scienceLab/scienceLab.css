@@ -1,0 +1,251 @@
+/* 리셋 */
+a {text-decoration:none;outline:none;}
+a:hover, a:active {text-decoration:none;}
+ 
+/* 공통 */
+body {font-size:12px;font-weight:400;min-width:1250px;background:#f4f4f4;font-family:'Noto Sans KR',sans-serif;}
+* {padding:0;margin:0;font-family:'Noto Sans KR',sans-serif;}
+.container {width:1100px;margin:auto;position:relative;}
+.blind {overflow:hidden;position:absolute;left:-1000000px;text-indent:-1000000px;margin:-1px;width:1px;height:1px;}
+
+/* 공통 Header */ 
+.scLabHeader .login {float:right;margin-top:15px;}
+.scLabHeader .login form {display:inline-block;}
+.scLabHeader .login form ul:after {display:block;clear:both;content:"";}
+.scLabHeader .login form ul li {float:left;}
+.scLabHeader .login form ul li input[type="text"],
+.scLabHeader .login form ul li input[type="password"] {width:120px;height:28px;padding:0 0 0 13px;line-height:28px;color:#99a9b7;font-size:12px;margin-right:5px;letter-spacing:-0.4px;font-size:12px;border-radius:5px;}
+.scLabHeader .login form ul li a {display:inline-block;width:80px;height:28px;color:#393d49;line-height:28px;text-align:center;background:#ffd563;font-size:12px;border-radius:5px;font-weight:500;}
+.scLabHeader .logout {float:right;margin-top:20px;}
+.scLabHeader .logout span {line-height:28px;font-size:13px;color:#3c4453;font-weight:400;}
+.scLabHeader .logout .name {font-weight:500;margin-right:2px;}
+.scLabHeader .logout button {width:80px;height:28px;text-align:center;line-height:28px;font-size:13px;color:#74757d;background:#FFF;border:1px solid #d6d6d6;border-radius:5px;margin-left:10px;font-family:'Noto Sans KR',sans-serif;}
+
+/* 공통 Footer */
+#scLabFooter {position:relative;background:#f4f4f4;padding:0 0 40px 0;margin:0 auto;text-align:center;}
+#scLabFooter .logo {width:91px;height:31px;margin:auto;padding:50px 0;background:url('../../img/scienceLab/logo_visang_sb.png') no-repeat 0 40px;}
+#scLabFooter .link {width:270px;margin:15px auto 30px auto;*zoom:1;}
+#scLabFooter .link:after {content:'';display:block;clear:both;}
+#scLabFooter .link li {float:left;padding:0 13px;border-left:1px solid #d1d1d1;line-height:13px;color:#636774;}
+#scLabFooter .link li a {color:#636774;font-size:14px;letter-spacing:-0.5px;font-weight:400;}
+#scLabFooter .link li:first-child {border-left:none;}
+#scLabFooter .link li a:hover {text-decoration: none;}
+#scLabFooter .info {font-size:12px;color:#b2b3b7;line-height:12px;margin-bottom:10px;}
+#scLabFooter .info li {margin-bottom:10px;}
+#scLabFooter .info span {position:relative;padding:0 5px;}
+#scLabFooter .info span:after {position:absolute;right:-2px;top:5px;display:block;content:"";width:1px;height:10px;background:#c6c6c6;}
+#scLabFooter .info span:last-child:after {display:none;}
+#scLabFooter .info li a {color:#b2b3b7;}
+
+
+/* Main */
+.mainWrap {background:url('../../img/scienceLab/main_bg.png') no-repeat 50% 0;background-size:cover;}
+
+/* Main Header */
+#headerMain {width:100%;height:60px;border-bottom:1px solid #38c0e5;}
+#headerMain:after {display:block;clear:both;content:"";}
+#headerMain h1 {float:left;margin-top:14px;}
+#headerMain h2 {float:right;margin:20px 0 0 15px;}
+#headerMain .logout span {line-height:28px;font-size:13px;color:#3c4453;font-weight:400;}
+#headerMain .logout .teacher {color:#FFF;margin-right:6px;}
+#headerMain .logout button {width:80px;height:28px;text-align:center;line-height:28px;font-size:12px;color:#393d49;background:#e7e6e6;border-radius:5px;margin-left:10px;font-weight:500;font-family:'Noto Sans KR',sans-serif;}
+ 
+/* Main Content */
+#conMain {padding-bottom:100px;}
+#conMain .util {position:relative;width:100%;margin-top:15px;}
+#conMain .util:after {display:block;clear:both;content:"";}
+#conMain .util a {display:inline-block;height:30px;line-height:30px;font-size:14px;color:#FFF;background:#313c5e;letter-spacing:-0.5px;border-radius:5px;text-align:center;}
+#conMain .util .guide {float:left;width:125px;}
+#conMain .util .intro {float:right;width:96px;}
+#conMain .util img {position:absolute;top:25px;left:-30px;}
+#conMain h3 {text-align:center;padding:5px 0 30px 0;}
+#conMain .tabWarp .tabGrade {padding:20px 50px;background:#313c5e;border-radius:25px 25px 0 0;}
+#conMain .tabWarp .tabGrade:after {display:block;clear:both;content:"";}
+#conMain .tabWarp .tabGrade li {position:relative;float:left;}
+#conMain .tabWarp .tabGrade li:before {position:absolute;top:20px;right:0;display:block;content:"";width:1px;height:16px;background:#5a637e;}
+#conMain .tabWarp .tabGrade li:last-child:before {display:none;}
+#conMain .tabWarp .tabGrade li a {position:relative;display:block;width:250px;height:50px;line-height:50px;border-radius:15px;font-size:22px;color:#d9d9d9;letter-spacing:-0.3px;text-align:center;z-index:1;}
+#conMain .tabWarp .tabGrade li.tabOn a {color:#FFF;font-weight:400;}
+#conMain .tabWarp .tabGrade .tabOn:after {position:absolute;top:0;left:52px;display:block;content:"";width:140px;height:50px;background:#ed4f4f;border-radius:15px;}
+#conMain .tabConWrap {position:relative;padding:0 20px 20px 20px;background:#313c5e;border-radius:0 0 25px 25px;}
+#conMain .tabConWrap:before {display:block;position:absolute;left:-125px;bottom:-65px;content:"";width:223px;height:273px;background:url('../../img/scienceLab/character1.png') no-repeat;z-index:1;}
+#conMain .tabConWrap:after {display:block;position:absolute;right:-85px;bottom:-65px;content:"";width:149px;height:285px;background:url('../../img/scienceLab/character2.png') no-repeat;z-index:1;}
+#conMain .tabConWrap .tabCon {display:none;position:relative;width:1060px;height:370px;overflow:hidden;background:#FFF;border-radius:25px;}
+#conMain .tabConWrap .tabCon:after {display:block;clear:both;content:"";}
+#conMain .tabConWrap .tabCon.defaultTab {background:url('../../img/scienceLab/defaultTab_bg.png') 50% 50% no-repeat #FFF;text-align:center;}
+#conMain .tabConWrap .tabCon.defaultTab p {line-height:34px;letter-spacing:-1px;color:#393d49;}
+#conMain .tabConWrap .tabCon.defaultTab .deTxt01 {margin-top:110px;font-size:21px;font-weight:300;}
+#conMain .tabConWrap .tabCon.defaultTab .deTxt02 {margin-top:20px;font-size:28px;font-weight:600;} 
+#conMain .tabConWrap .tabClass {float:left;display:flex;flex-direction:column;width:280px;height:100%;}
+#conMain .tabConWrap .tabClass li {position:relative;box-sizing:border-box;display:flex;flex:1;background:#f1f1f1;border-right:1px solid #ddd;text-align:right;}
+#conMain .tabConWrap .tabClass li + li {border-top:1px solid #ddd;}
+#conMain .tabConWrap .tabClass li.tabOn:after {content:'';position:absolute;top:0;left:0;display:block;width:290px;height:100%;background:#76cc80;border-radius:0 15px 15px 0;}
+#conMain .tabConWrap .tabClass li a {display:flex;align-items:center;justify-content:flex-end;flex:1;box-sizing:border-box;padding-right:40px;font-size:18px;font-weight:400;color:#626976;letter-spacing:-0.05em;}
+#conMain .tabConWrap .tabClass li.tabOn a {background:url('../../img/scienceLab/tab_right.png') no-repeat 256px 50%;font-size:20px;font-weight:500;color:#fff;letter-spacing:-0.06em;z-index:1;}
+#conMain .tabConWrap .tabClass + section {float:right;box-sizing:border-box;width:780px;height:100%;}
+#conMain .tabConWrap .tabTxtBox {display:none;position:absolute;top:0;right:0;box-sizing:border-box;width:723px;height:312px;margin:30px;border:1px solid #fff;}
+#conMain .tabConWrap .tabTxtBox:hover {background:#f8f9d8;border:1px solid #f3ea9f;border-radius:30px;}
+#conMain .tabConWrap .tabTxtBox a {display:block;box-sizing:border-box;height:100%;padding:24px 12px 0 296px;background-position:12px 12px;background-repeat:no-repeat;}
+/*각 과목당 이미지*/
+/* 3-1 */
+#conMain .tabConWrap .grade3 .tabTxtBox#tabBox1 > a {background-image:url('../../img/scienceLab/img_tab3_1_1.png');}
+#conMain .tabConWrap .grade3 .tabTxtBox#tabBox2 > a {background-image:url('../../img/scienceLab/img_tab3_1_2.png');}
+#conMain .tabConWrap .grade3 .tabTxtBox#tabBox3 > a {background-image:url('../../img/scienceLab/img_tab3_1_3.png');}
+/* 4-1 */
+#conMain .tabConWrap .grade4 .tabTxtBox#tabBox4 > a {background-image:url('../../img/scienceLab/img_tab4_1_1.png');}
+#conMain .tabConWrap .grade4 .tabTxtBox#tabBox5 > a {background-image:url('../../img/scienceLab/img_tab4_1_2.png');}
+#conMain .tabConWrap .grade4 .tabTxtBox#tabBox6 > a {background-image:url('../../img/scienceLab/img_tab4_1_3.png');}
+#conMain .tabConWrap .grade4 .tabTxtBox#tabBox7 > a {background-image:url('../../img/scienceLab/img_tab4_1_4.png');}
+/* 5-1 */
+#conMain .tabConWrap .grade5 .tabTxtBox#tabBox8 > a {background-image:url('../../img/scienceLab/img_tab5_1_1.png');}
+#conMain .tabConWrap .grade5 .tabTxtBox#tabBox9 > a {background-image:url('../../img/scienceLab/img_tab5_1_2.png');}
+#conMain .tabConWrap .grade5 .tabTxtBox#tabBox10 > a {background-image:url('../../img/scienceLab/img_tab5_1_3.png');}
+#conMain .tabConWrap .grade5 .tabTxtBox#tabBox11 > a {background-image:url('../../img/scienceLab/img_tab5_1_4.png');}
+/* 6-1 */
+#conMain .tabConWrap .grade6 .tabTxtBox#tabBox12 > a {background-image:url('../../img/scienceLab/img_tab6_1_1.png');}
+#conMain .tabConWrap .grade6 .tabTxtBox#tabBox13 > a {background-image:url('../../img/scienceLab/img_tab6_1_2.png');}
+#conMain .tabConWrap .grade6 .tabTxtBox#tabBox14 > a {background-image:url('../../img/scienceLab/img_tab6_1_3.png');}
+
+#conMain .tabConWrap .tabTxtBox ul {width:466px;height:288px;background:url('/images/scienceLab/tabTxtBox_bg.png') no-repeat;box-sizing:border-box;}
+#conMain .tabConWrap .tabTxtBox ul li {margin-bottom:20px;}
+#conMain .tabConWrap .tabTxtBox ul li p {font-size:18px;color:#393d49;line-height:34px;letter-spacing:-0.8px;font-weight:500;}
+#conMain .tabConWrap .tabTxtBox ul li p span {display:inline-block;width:85px;height:34px;margin:0 5px 0 0;line-height:34px;color:#FFF;text-align:center;background:#08bbdd;border-radius:17px;font-size:18px;}
+#conMain .tabConWrap .tabTxtBox ul li span {display:inline-block;margin:10px 0 0 10px;font-size:16px;color:#757a89;letter-spacing:-0.7px;line-height:16px;}
+
+/* 공통 Sub */
+#headerSub {position:relative;background:#f7f7f7;height:75px;}
+#headerSub:after {display:block;clear:both;content:"";}
+#headerSub .util {float:left;margin-top:25px;}
+#headerSub .util a {display:inline-block;height:30px;line-height:30px;font-size:14px;color:#FFF;letter-spacing:-0.5px;border-radius:5px;text-align:center;}
+#headerSub .util .guide {width:125px;background:#2bb9ba;margin-right:5px;}
+#headerSub .util .intro {width:100px;background:#313c5e;}
+#headerSub h1 {position:absolute;left:438px;top:17px;text-align:center;}
+#headerSub h2 {float:right;margin:25px 0 0 15px;}
+#headerSub .login, #headerSub .logout {margin-top:25px;}
+#ContentSub {padding:45px 0 80px 0;border-bottom:1px solid #dedede;}
+#ContentSub .conTop h3 {font-size:26px;color:#333;letter-spacing:-1px;margin-bottom:18px;line-height:26px;}
+#ContentSub .conTop p {font-size:16px;color:#333;letter-spacing:-1px;font-weight:400;margin-bottom:25px;line-height:16px;}
+.scienceLabSub .scLabHeader .login form ul li input[type="text"],
+.scienceLabSub .scLabHeader .login form ul li input[type="password"] {width:90px;border:1px solid #d6dce7;border-radius:5px;}
+
+/* Sub */
+.scienceLabSub #ContentSub {padding:0;background:#fff;}
+.scienceLabSub .navWrap {border-top:1px solid #DDD;border-bottom:1px solid #DDD;}
+.scienceLabSub .navWrap .container{width:1100px;margin:0 auto;}
+.scienceLabSub .navWrap .tab1{position:relative;z-index:1;}
+.scienceLabSub .navWrap .tab1:after {content:'';display:block;clear:both;}
+.scienceLabSub .navWrap .tab1 > li{float:left;min-width:143px;height:48px;}
+.scienceLabSub .navWrap .tab1 > li > .btnDepth01{position:relative;display:block;padding:0 50px;border-right:1px solid #fff;border-left:1px solid #fff;font-size:18px;font-weight:500;color:#606677;letter-spacing:-0.04em;line-height:2.67;}
+.scienceLabSub .navWrap .tab2{overflow:hidden;display:none;min-width:143px;height:182px;background:#fff;border:1px solid #ddd;z-index:1;}
+.scienceLabSub .navWrap .tab1.on .tab2{display:block;}
+.scienceLabSub .navWrap .tab2 li a{display:block;width:100%;padding:0 50px;font-size:18px;font-weight:500;color:#9799a0;line-height:2.5;letter-spacing:-0.04em;}
+.scienceLabSub .navWrap .tab2 li a.on,
+.scienceLabSub .navWrap .tab2 li a:hover{background:#f1f1f1;font-weight:500;color:#ff8125;}
+.scienceLabSub .navWrap .tab1 > li:nth-child(2),
+.scienceLabSub .navWrap .tab1 > li:nth-child(3){margin-left:-1px;}
+.scienceLabSub .navWrap .tab1 > li + li .btnDepth01{background:url('../../img/scienceLab/nav_bg.png') no-repeat 0 0;}
+.scienceLabSub .navWrap .tab1 > li:nth-child(3) > .btnDepth01:after{content:'';position:absolute;top:50%;right:10px;display:inline-block;width:13px;height:9px;margin-top:-4px;background:url('../../img/scienceLab/sub_nav_down.png');vertical-align:middle;}
+.scienceLabSub .navWrap .tab1.on > li:nth-child(3) > .btnDepth01:after{background:url('../../img/scienceLab/sub_nav_up.png');}
+.scienceLabSub .navWrap .tab1 > li:nth-child(1) .tab2{border-radius:0 0 0 8px;}
+.scienceLabSub .navWrap .tab1 > li:nth-child(3) .tab2{border-radius:0 0 8px 0;}
+/*.scienceLabSub .navWrap nav .btnNavGo {display:inline-block;width:85px;height:32px;background:#6ec5ff;border-radius:8px;font-family:'Noto Sans KR', sans-serif;font-size:14px;font-weight:500;color:#fff;vertical-align:middle;}*/
+.scienceLabSub .subConWrap {padding-bottom:80px;}
+.scienceLabSub .subConWrap .container {width:960px;}
+.scienceLabSub .subConWrap .conts {position:relative;width:960px;margin:auto;padding:0 0 50px 0;}
+.scienceLabSub .subConWrap .conts:before {display:none;}
+.scienceLabSub .subConWrap .tit{float:left;position:relative;display:inline-block;margin-top:25px;font-size:20px;color:#6b6b6b;z-index:1;}
+.scienceLabSub .subConWrap .btnFull {float:right;position:relative;display:inline-block;margin-top:40px;z-index:1;}
+.scienceLabSub .subConWrap .conTollWrap {position:relative;width:960px;height:680px;padding-top:82px;}
+.scienceLabSub .subConWrap .conToll {width:960px;height:600px;background:#FFF;}
+.scienceLabSub .subConWrap .conToll > iframe{width:100%;height:100%;}
+.scienceLabSub .subConWrap .exCont {position:absolute;left:0;top:82px;width:960px;height:600px;text-align:center;background-color:rgba(0, 0, 0, 0.3);}
+.scienceLabSub .subConWrap .exCont h3:before {content:"";display:block;width:70px;height:70px;background:url('../../img/scienceLab/bu_exclamation_big.png') no-repeat 0 0;margin:auto;margin-bottom:20px;}
+.scienceLabSub .subConWrap .exCont h3 {margin-top:180px;text-align:center;font-size:28px;color:#333;margin-bottom:30px;}
+.scienceLabSub .subConWrap .exCont p {font-size:19px;color:#666;}
+.scienceLabSub .subConWrap .exCont p a {font-weight:600;color:#2b70bf;text-decoration:none;}
+.scienceLabSub .subConWrap .arTxt {position:absolute;top:700px;left:5px;}
+.scienceLabSub .subConWrap .arTxt p {font-size:16px;color:#8c8c8c;letter-spacing:-1px;font-weight:400;}
+.scienceLabSub .subConWrap .arTxt strong {color:#393d49;font-size:16px;font-weight:400;}
+.scienceLabSub .subConWrap .btnWrap {position:absolute;bottom:0;right:0;text-align:center;margin-top:30px;}
+.scienceLabSub .subConWrap .btnWrap a:first-of-type {margin-right:5px;}
+/* 연계 자료 */
+.scienceLabSub .subChasi{padding:0 0 90px 0;}
+.scienceLabSub .subChasi h3{margin-bottom:20px;padding-left:38px;background:url('../../img/scienceLab/common/ico_bul.png') 0 50% no-repeat;font-size:26px;color:#393d49;font-weight:600;letter-spacing:-0.05em;}
+.scienceLabSub .subChasi .dataListWrap > [class^="data"] + [class^="data"]{border-top:1px solid #ddd;}
+.scienceLabSub .subChasi .dataListWrap .txtWrap{display:inline-block;width:940px;font-size:18px;color:#393d49;text-align:left;line-height:1.37;letter-spacing:-0.04em;}
+.scienceLabSub .subChasi .dataListWrap .dataTit{border-top:3px solid #393d49 !important;}
+.scienceLabSub .subChasi .dataListWrap .dataTit a{display:block;padding:15px 20px;background:#f7f7f7;font-size:0;}
+.scienceLabSub .subChasi .dataListWrap .dataTit .tit{font:inherit;font-weight:500;}
+.scienceLabSub .subChasi .dataListWrap .dataTit .subTit{font:inherit;font-weight:400;}
+.scienceLabSub .subChasi .dataListWrap .dataTit .subTit:before{content:'';display:inline-block;width:9px;height:13px;margin:0 10px;background:url('../../img/scienceLab/ico_arr.png') 0 0 no-repeat;}
+.scienceLabSub .subChasi .dataListWrap .dataTit .subTit .mark{display:inline-block;box-sizing:border-box;width:32px;height:23px;margin:0 0 0 20px;background:#fff;border:1px solid #1c60e9;border-radius:5px;font-size:12px;color:#1c60e9;text-align:center;line-height:1.8;vertical-align:top;letter-spacing:-0.04em;}
+.scienceLabSub .subChasi .dataListWrap .dataTit .labelLink{display:inline-block;box-sizing:border-box;width:117px;height:37px;background:#fff;border:1px solid #bec6ce;border-radius:18px;font-size:14px;font-weight:400;color:#313c5e;text-align:center;line-height:2.5;letter-spacing:-0.06em;}
+.scienceLabSub .subChasi .dataListWrap .dataTit a:hover .labelLink{border:1px solid #ff8125;color:#ff8125;}
+.scienceLabSub .subChasi .dataListWrap .dataItem{background:#fff;}
+.scienceLabSub .subChasi .dataListWrap .dataItem:last-child{border-bottom:1px solid #ddd;}
+.scienceLabSub .subChasi .dataListWrap .dataItem a{display:block;box-sizing:border-box;padding:11px 20px;background:#fff;font-size:0;}
+.scienceLabSub .subChasi .dataListWrap .dataItem p{font-size:15px;color:#7f8085;font-weight:400;line-height:1.66;letter-spacing:-0.04em;}
+.scienceLabSub .subChasi .dataListWrap .dataItem p:before{content:'';display:inline-block;width:26px;height:26px;margin-right:12px;background:url('../../img/scienceLab/ico_subtxt_off.png') 0 0 no-repeat;vertical-align:middle;}
+.scienceLabSub .subChasi .dataListWrap .dataItem a:hover p{color:#ff8125;}
+.scienceLabSub .subChasi .dataListWrap .dataItem a:hover p:before{background:url('../../img/scienceLab/ico_subtxt_on.png') 0 0 no-repeat;}
+.scienceLabSub .subChasi .dataListWrap .dataItem + .dataTit{margin-top:20px;}/* 과학 */
+/* 차시열기 버튼 */
+.scienceLabSub .dataItem .txtWrap + .btn_chapter{display:inline-block;width:117px;}
+.scienceLabSub .dataItem a:hover .btn_chapter{background:#ff6019;color:#fff;text-decoration:none;}
+
+/* 공통 팝업 */
+.dim {display:none;position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:160%;background:#000;opacity:0.7;z-index:99;}
+.popUp {display:none;position:absolute;left:calc(50% - 480px);top:50px;width:960px;background:#FFF;border-radius:25px;z-index:100;overflow:hidden;}
+.popUp .popTop {position:relative;background:#313c5e;padding:0px 50px;}
+.popUp .popTop h1 {height:80px;line-height:80px;font-size:28px;font-weight:600;letter-spacing:-0.7px;color:#FFF;}
+.popUp .popTop a {position:absolute;top:27px;right:50px;}
+.popUp .popCon {border:4px solid #313c5e;border-radius:0 0 25px 25px;}
+.popUp .popCon div[class*="con"] p {height:22px;padding-left:20px;margin-bottom:10px;background:url('../../img/scienceLab/pop_txt_ico.png') 0 7px no-repeat;line-height:22px;font-size:22px;font-weight:600;color:#313c5e;letter-spacing:-0.6px;}
+.popUp .popCon .txt {color:#606677;letter-spacing:-0.5px;font-size:16px;padding-left:20px;}
+
+/* 실험실 활용 안내 팝업 */
+#popupGuide .popCon {padding:50px;}
+#popupGuide .popCon > div + div{margin-top:54px;}
+#popupGuide .popCon ul {margin:30px 0 0 0;}
+#popupGuide .popCon ul:after {display:block;clear:both;content:"";}
+#popupGuide .popCon ul li {float:left;margin-right:6px;width:280px;}
+#popupGuide .popCon ul li:last-child {margin-right:0;}
+#popupGuide .popCon .con2 img {margin-top:15px;}
+#popupGuide .spec {margin-top:60px;}
+#popupGuide .spec span {color:#8c8c8c;font-size:14px;letter-spacing:-0.5px;font-weight:500;}
+#popupGuide .spec p span {color:#313c5e;font-weight:500;}
+#popupGuide table {text-align:center;margin:10px 0;}
+#popupGuide table tr {border-bottom:1px solid #dbdbdb;}
+#popupGuide table tr:last-child {border-bottom:1px solid #CCC;}
+#popupGuide table th {background:#6ec5ff;color:#FFF;font-weight:500;font-size:16px;height:50px;border-right:1px solid #49aaea;}
+#popupGuide table th:last-child {border-right:none;}
+#popupGuide table td {color:#606677;border-right:1px solid #ededed;font-size:16px;height:55px;font-weight:400;line-height:22px;}
+#popupGuide table td:first-child {background:#f7f7f7;color:#393d49;font-weight:500;}
+#popupGuide table td:last-child {border-right:none;}
+#popupGuide .infoListWrap{margin-top:25px;padding:0 18px;}
+#popupGuide .infoListWrap .labelTit{display:inline-block;width:87px;height:26px;background:#6ec5ff;border-radius:13px;font-size:16px;font-weight:400;color:#fff;text-align:center;line-height:1.625;}
+#popupGuide .infoListWrap ul{margin-top:10px;}
+#popupGuide .infoListWrap ul li{float:none;width:100%;margin:0;font-size:16px;color:#606677;line-height:1.625;letter-spacing:-0.04em;}
+#popupGuide .infoListWrap ul li:before{content:'-';display:inline-block;margin-right:5px;}
+#popupGuide .appInfoWrap{overflow:hidden;margin-top:25px;padding:30px 45px;background:#f1f9fc;}
+#popupGuide .appInfoWrap > *{float:left;}
+#popupGuide .appInfoWrap > div + div{margin-left:33px;}
+#popupGuide .appInfoWrap .qrTit{height:auto;margin:15px 0 0 0;padding-left:0;background:none;font-size:16px;font-weight:500;color:#000;text-align:center;}
+#popupGuide .appInfoWrap ul{margin:10px 0 0 23px;}
+#popupGuide .appInfoWrap ul li{float:none;width:100%;margin:0;font-size:16px;font-weight:400;color:#54575a;line-height:1.875;letter-spacing:-0.04em;}
+#popupGuide .appInfoWrap ul li:before{content:'';display:inline-block;width:2px;height:2px;background:#54575a;border-radius:100%;margin-right:5px;vertical-align:middle;}
+
+/* 선생님 소개 팝업 */
+#popupTeacher.popUp {width:580px;left:calc(50% - 290px);}
+#popupTeacher.popUp .popCon {padding:0 35px 20px 35px;}
+#popupTeacher.popUp .popTop {padding:0 35px;}
+#popupTeacher.popUp .popTop h1 {font-size:26px;}
+#popupTeacher.popUp .popTop a {position:absolute;top:27px;right:30px;}
+#popupTeacher .teacherBox {padding:30px 0 30px 117px;background-repeat:no-repeat;background-position:0 30px;}
+#popupTeacher .teacherBox:nth-child(1) {background-image:url('../../img/scienceLab/pop_teacher01.png');border-bottom:1px solid #e9e9e9;}
+#popupTeacher .teacherBox:nth-child(2) {background-image:url('../../img/scienceLab/pop_teacher02.png');border-bottom:1px solid #e9e9e9;}
+#popupTeacher .teacherBox:nth-child(3) {background-image:url('../../img/scienceLab/pop_teacher03.png');}
+#popupTeacher .teacherBox p {padding:8px 0 10px 0;font-size:20px;line-height:20px;letter-spacing:-0.7px;color:#313c5e;font-weight:500;}
+#popupTeacher .teacherBox p strong {font-size:20px;color:#5085cd;font-weight:500;letter-spacing:-0.7px;}
+#popupTeacher .teacherBox ul li {position:relative;padding-left:10px;font-size:16px;line-height:26px;color:#8c8c8c;letter-spacing:-0.7px;}
+#popupTeacher .teacherBox ul li:before {position:absolute;left:0;top:12px;display:block;content:'';width:3px;height:3px;background:#8c8c8c;}

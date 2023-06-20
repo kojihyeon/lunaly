@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Event 01</title>
+	<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="../../js/teachware/common.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet"type="text/css" href="../../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../css/event/event01.css">
+</head>
+<body>
+	<section>
+		<div class="evtWrap">
+			<div class="evtCont">
+				<img src="../../img/event/event01/txt_title1.png">
+				<div class="blind">
+					<h5>1. 2020년 V매거진 중 가장 좋았던 테마를 선택해 주세요.</h5>
+					<span class="infoTxt">※ 최대 2개까지 선택 가능합니다.</span>
+				</div>
+				<div class="checkWrap">
+					<ul>
+						<li>
+							<input type="checkbox" name="check" id="check1" value="나일론 개발">
+							<label for="check1"><img src="../../img/event/event01/v_02.jpg"><span class="ckeckMunth">2020.02</span><span class="checkTxt">나일론 개발</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check2" value="진시황릉 병마용갱 발견">
+							<label for="check2"><img src="../../img/event/event01/v_03.jpg"><span class="ckeckMunth">2020.03</span><span class="checkTxt">진시황릉<br>병마용갱 발견</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check3" value="서울 시내버스 등장">
+							<label for="check3"><img src="../../img/event/event01/v_04.jpg"><span class="ckeckMunth">2020.04</span><span class="checkTxt">서울 시내버스<br>등장</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check4" value="표트르 일리치 차이콥스키 출생">
+							<label for="check4"><img src="../../img/event/event01/v_05.jpg"><span class="ckeckMunth">2020.05</span><span class="checkTxt">표트르 일리치<br>차이콥스키 출생</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check5" value="세계 우유의 날">
+							<label for="check5"><img src="../../img/event/event01/v_06.jpg"><span class="ckeckMunth">2020.06</span><span class="checkTxt">세계 우유의 날</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check6" value="안동 하회마을, 세계 유산 등재">
+							<label for="check6"><img src="../../img/event/event01/v_07.jpg"><span class="ckeckMunth">2020.07</span><span class="checkTxt">안동 하회마을,<br>세계 유산 등재</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check7" value="작가 요한 볼프강 폰 괴테 출생">
+							<label for="check7"><img src="../../img/event/event01/v_08.jpg"><span class="ckeckMunth">2020.08</span><span class="checkTxt">작가 요한 볼프강<br>폰 괴테 출생</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check8" value="곤충의 날">
+							<label for="check8"><img src="../../img/event/event01/v_09.jpg"><span class="ckeckMunth">2020.09</span><span class="checkTxt">곤충의 날</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check9" value="노인의 날">
+							<label for="check9"><img src="../../img/event/event01/v_10.jpg"><span class="ckeckMunth">2020.10</span><span class="checkTxt">노인의 날</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check10" value="우정총국 업무 개시">
+							<label for="check10"><img src="../../img/event/event01/v_11.jpg"><span class="ckeckMunth">2020.11</span><span class="checkTxt">우정총국<br>업무 개시</span></label>
+						</li>
+						<li>
+							<input type="checkbox" name="check" id="check11" value="노벨상 수여">
+							<label for="check11"><img src="../../img/event/event01/v_12.jpg"><span class="ckeckMunth">2020.12</span><span class="checkTxt">노벨상 수여</span></label>
+						</li>
+						<li>
+							<a href="/opendata/VMagazine2018.do" target="_blank" title="새창열림"><img src="../../img/event/event01/v_more.jpg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="evtCont">
+				<img src="../../img/event/event01/txt_title2.png">
+				<div class="blind">
+					<h5>2. 2021년 V매거진 테마를 추천해주세요.</h5>
+					<span class="infoTxt">V매거진은 계기 수업에 활용할 수 있는 흥미로운 주제를 탑재하고 있습니다.</span>
+				</div>
+				<div class="commendWrap">
+					<p class="count">(<span id="reasonCount">0</span>/200)</p>
+					<div class="evtTextarea">
+						<textarea name="" id="reason" cols="1" rows="1" placeholder="200자 이내로 입력해 주세요." onfocus="this.placeholder = ''"></textarea>
+					</div>
+				</div>
+				<div class="btnWrap">
+					<button type="button" id="eApply" class="btn"><img src="../../img/event/event01/btn_apply.png" alt="참여하기"></button>
+				</div>
+			</div>
+			<div class="evtListWrap">
+				<!-- 글 리스트 -->
+				<ul id="storyList" class="evtList">
+					<li>
+						<strong><span class="uid">visang***</span> 선생님</strong>
+						<p class="txt">비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다. 비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다.</p>
+					</li>
+					<li>
+						<strong><span class="uid">visang***</span> 선생님</strong>
+						<p class="txt">비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다. 비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다.</p>
+					</li>
+					<li>
+						<strong><span class="uid">visang***</span> 선생님</strong>
+						<p class="txt">비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다. 비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다.</p>
+					</li>
+					<li>
+						<strong><span class="uid">visang***</span> 선생님</strong>
+						<p class="txt">비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다. 비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다.</p>
+					</li>
+					<li>
+						<strong><span class="uid">visang***</span> 선생님</strong>
+						<p class="txt">비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다. 비상교육을 좋아하는 고등학교 수학 교사입니다. 항상 좋은 자료로 도움많이 받고 있습니다.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</body>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/empty-layout">
+<th:block layout:fragment="css">
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/css/themeplace/scienceLab/scienceLab.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/plugins/unity/shape/TemplateData/style.css}"/>
+</th:block>
+<div layout:fragment="content">
+	<script th:src="@{/resources/js/themeplace/scienceLab/common.js}"></script>
+	<script th:src="@{/resources/plugins/unity/shape/TemplateData/UnityProgress.js}"></script>
+	<script th:src="@{/resources/plugins/unity/shape/Build/UnityLoader.js}"></script>
+
+	<!-- 테마관 : 해당 테마관에서 사용하는 css/js -->
+	<script type="text/javascript" th:src="@{/resources/js/themeplace/scienceLab/es6-promise.min.js}"></script>
+	<script type="text/javascript" th:src="@{/resources/js/themeplace/scienceLab/es6-promise.auto.min.js}"></script>
+	<script type="text/javascript" th:src="@{/resources/plugins/unity/shape/shape.ui.js}"></script>
+	<script type="text/javascript" th:inline="javascript">
+		/*<![CDATA[*/
+		$(function() {
+
+			$("#userId").keypress(function(e){
+				if (e.keyCode == 13) {
+					$('.cont .pw').hide();
+					$('.cont input[type="password"]').show();
+					$('.cont input[type="password"]').focus();
+					return false;
+				}
+			});
+
+			$("#userPwd,#loginBtn").keypress(function(e){
+				if (e.keyCode == 13) {
+					_login('loginFrmGnb');
+					return false;
+				}
+			});
+
+			$(document).on('click','.btnNavGo',function(){
+				var seq = $('#sectionTab .tabOn').parent().data('seq');
+				location.href = "/themeplace/scienceLab/sub?lnbMenuSeq="+seq;
+			});
+
+		});
+
+		var isLogging = false;
+
+		/*[# th:if="${@sessionUtils.isLogin()}"]*/
+		var memberId = "[(${@sessionUtils.getMember().memberId})]";
+
+		function _logout() {
+
+
+			if (isLogging) return;
+
+			isLogging = true;
+
+			Ajax.execute({
+				url: '/member/logout.json',
+				data: JSON.stringify({
+					type : "logout"
+				}),
+				contentType: 'application/json',
+				method: 'post',
+				dataType: 'json',
+				success: function(data){
+
+					if(data.result == "SUCCESS"){
+						location.reload();
+					}
+
+					isLogging = false;
+
+				},
+				error: function (xhr, ajaxOptions, thrownError){
+				},
+				complete:function (xhr, textStatus){
+					isLogging = false;
+				}
+			});
+		}
+		/*[/]*/
+		/*[# th:if="${!@sessionUtils.isLogin()}"]*/
+
+		var memberId = "";
+		function _login(formId) {
+
+			if (isLogging) return;
+
+			isLogging = true;
+
+			var id = $.trim($('form[id=' + formId + ']').find('input:text').eq(0).val());
+			var pwd = $('form[id=' + formId + ']').find('input:password').val();
+
+			if (id == '' || pwd == '') {
+				isLogging = false;
+				alert('사용자ID 혹은 비밀번호를 입력해 주시기 바랍니다.');
+				return;
+			}
+
+			$('#' + formId).find('input:text').eq(0).val(id);
+			$('#' + formId).find('input:password').val(pwd);
+
+			Ajax.execute({
+				url: '/member/signInVivasam.json',
+				data: JSON.stringify({
+					memberId : id,
+					passwd: pwd
+				}),
+				contentType: 'application/json',
+				method: 'post',
+				dataType: 'json',
+				success: function(result) {
+
+					var code = result.response.code;
+					var msg = result.response.msg;
+					if(code != 'fail') {
+						location.reload();
+					} else {
+						if(msg != null && msg != '') {
+							alert(msg);
+							isLogging = false;
+						}
+					}
+				}
+			});
+		}
+
+		$(document).ready(function() {
+			$('form[id=loginFrmPop]').find('input:text').focus(function() {
+				if ($.trim(($.cookie('user_id') != 'null' && $.cookie('user_id') != 'undefined' ? $.cookie('user_id') : '')) == '' && $(this).val() == '아이디' ) {
+					$(this).val('');
+				}
+			});
+
+			$('form[id=loginFrmPop]').find('input:password').focus(function() {
+				$(this).val('');
+			});
+
+			$('form[id=loginFrmPop]').find('input:password').keyup(function(event){
+				if (event.keyCode == 13) {
+					_login('loginFrmPop');
+				}
+			});
+		});
+
+		/*[/]*/
+
+		var lnbMenuUrl = "[(${subInfo.lnbMenuUrl})]";
+		var serverName = "[(${serverName})]";
+
+		$(document).ready(function(){
+
+			$('#contentFrame').attr('src', lnbMenuUrl);
+			var DEVICE_TYPE = '[(${DEVICE_TYPE})]';
+
+			if(DEVICE_TYPE == "mobile" || DEVICE_TYPE == "tablet"){
+				$('.rich_not_supported').show();
+			}else{
+				var BROWSER_TYPE = '[(${BROWSER_TYPE})]';
+
+				if(BROWSER_TYPE != "CHROME"){
+					$('.exCont').show();
+					$('#contentFrame').css('display','none') //기존에 shape/sub4.jsp gameContainer 에서는 hide 안시키는데 현재 구조는 hide시켜줘야됨..
+				}
+			}
+
+		});
+
+
+		$(function() {
+			// 통합뷰어 팝업 오픈
+			$('.btnWrap').on('click', '.btn01,.btn02', function() {
+
+				if(LoginCHK()){
+					return;
+				}else{
+					var data = $(this).data();
+					// ZIP 컨텐츠는 새창으로 띄워주기
+					if (data.fileType == 'FT207') {
+						// FT359	iPDF (복합파일(ZIP)
+						if (data.mediaType == 'FT359') {
+							Popup.openSimpleSViewer(data.siteUrl);
+							return false;
+						}
+						// FT360	HTML5 (복합파일(ZIP) HTML5+ZIP (암석관) 이미지
+						if (data.mediaType == 'FT360') {
+							Popup.openHtmlViewer(data.siteUrl);
+							return false;
+						}
+					}
+					Popup.openViewerMain(data.contentId, data.contentGubun, '');
+				}
+
+			});
+
+			//LNB 클릭 이벤트
+			$('.btnDepth01').on('click', function () {
+				var $depth01 = $(this).closest('.tab1');
+
+				if(!$depth01.hasClass('on')) {
+					$depth01.addClass('on');
+				} else {
+					$depth01.removeClass('on');
+				}
+			});
+
+			//학년 클릭
+			$(document).on('click','#gradeUl li', function(){
+				var value = $(this).data('value');
+				var title = $(this).find('a').text();
+
+				// li 리스트 초기화 - 하일라이트 제거
+				tabClassReset('gradeCode');
+
+				$('#gradeText').text(title);
+				$('.gradeCode').data('value', value);
+				// 선택 li 하일라이트
+				$(this).find('a').addClass('on');
+
+				// 1학기로 하일라이트
+				tabClassReset('semesterCode');
+				$('#semesterUl li:first').find('a').addClass('on');
+
+				// 2차 메뉴 생성
+				getSectionCode(value,'SE001');
+			});
+
+
+			//학기 클릭
+			$(document).on('click','#semesterUl li', function(){
+				var grade = $('.gradeCode').data('value');
+				var value = $(this).data('value');
+
+				tabClassReset('semesterCode');
+				// 선택 li 하일라이트
+				$(this).find('a').addClass('on');
+
+				// 2차 메뉴 생성
+				getSectionCode(grade,value);
+			});
+
+
+			//메뉴 클릭 이벤트
+			$(document).on('click','#sectionTab li', function(){
+				var grade = $('.gradeCode').data('value');
+				var value = $(this).data('value');
+				var title = $(this).find('a').text();
+
+				// li 리스트 초기화 - 하일라이트 제거
+				tabClassReset('sectionCode');
+
+				$('#sectionText').text(title);
+				$('.sectionCode').data('value', value);
+				// 선택 li 하일라이트
+				$(this).find('a').addClass('on');
+			});
+
+			// 리스트 클래스 초기화
+			var tabClassReset = function(cl){
+				$('.' + cl + ' ul li').each( function(){
+					$(this).find('a').removeClass('on');
+				});
+			}
+
+			//수업지도안 팝업
+			$('.btnInst').on('click', function () {
+				if (CP_CONTENT_ID != '') {
+
+
+					$('html').scrollTop(50);
+					$(".popInst").show();
+					$(".popAct").hide();
+					$('#bgLayer').hide();
+				} else {
+					alert("등록된 수업지도안이 없습니다.");
+					$('#popupSub').hide();
+					$("#bgLayer").css("display","");
+					$(".dim").css("display","");
+				}
+			});
+
+			//활동지 팝업
+			$('.btnAct').on('click', function () {
+
+				if (WS_CONTENT_ID != '') {
+					$('html').scrollTop(50);
+					$(".popAct").show();
+					$(".popInst").hide();
+					$('#bgLayer').hide();
+				} else {
+					alert("등록된 활동지가 없습니다.");
+					$('#popupSub').hide();
+					$("#bgLayer").css("display","");
+					$(".dim").css("display","");
+				}
+			});
+		});
+
+
+		// 학년으로 단원코드 가져오기
+		function getSectionCode(grade,semester){
+
+			var go_url ="/themeplace/scienceLab/getSectionCode.json";
+
+			Ajax.execute({
+				url: go_url,
+				data: JSON.stringify({
+					grade: grade,
+					semester : semester
+				}),
+				contentType: 'application/json',
+				method: 'post',
+				dataType: 'json',
+				success: function(data){
+					var result = data.sectionList;
+					var html = "";
+
+					$("#sectionTab").empty();
+
+					if(result.length > 0){
+						for(var i=0; i < result.length; i++){
+							if(i == 0) {
+								html +="<li data-value="+result[i].codeId+" data-seq="+result[i].lnbMenuSeq+"><a href=\"/themeplace/scienceLab/sub?lnbMenuSeq=" + result[i].lnbMenuSeq + "\" class=\"on\">"+ result[i].codeName.replaceAll("<br>","") +"</a></li>"
+							} else {
+								html +="<li data-value="+result[i].codeId+" data-seq="+result[i].lnbMenuSeq+"><a href=\"/themeplace/scienceLab/sub?lnbMenuSeq=" + result[i].lnbMenuSeq + "\" >"+result[i].codeName.replaceAll("<br>","") +"</a></li>"
+							}
+						}
+						$("#sectionTab").append(html);
+						$('#sectionText').text(result[0].codeName.replaceAll("<br>",""));
+						$('.sectionCode').data('value', result[0].codeId);
+					}
+
+				},
+				error: function (xhr, ajaxOptions, thrownError){
+				},
+				complete:function (xhr, textStatus){
+				}
+			});
+		};
+
+		function LoginCHK()
+		{
+			if(memberId == ''){
+				Layer.openLayerLogin(function() {
+					location.reload();
+				});
+				return true;
+			}
+			return false;
+		}
+
+
+		function popPeriodViewer(periodId) {
+			if(LoginCHK()){
+				return;
+			}
+
+			var availWidth = window.screen.availWidth;
+			var availHeight = window.screen.availHeight;
+			var browserLeftPos = window.screenLeft || window.screenX;
+			var availLeft = window.screen.availLeft != undefined ? window.screen.availLeft : browserLeftPos > availWidth ? availWidth : 0;
+			var availTop = window.screen.availTop != undefined ? window.screen.availTop : 0;
+
+			var url = '/period/package.popup?periodId='+ periodId;
+			var options = 'top=' + availTop + ',left=' + availLeft + ',width=' + availWidth + ',height=' + availHeight + ',screenX=' + availLeft + ',screenY=' + availTop + ',toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=1,scrolling=0,scrollbars=no';
+
+			var popPeriodViewer = window.open(url, "contentPopup", options);
+			if (window.focus) {
+				popPeriodViewer.focus();
+			}
+		}
+
+
+		function popContentViewer(lnbMenuSeq) {
+			if(LoginCHK()){
+				return;
+			}
+
+			var availWidth = window.screen.availWidth;
+			var availHeight = window.screen.availHeight;
+			var browserLeftPos = window.screenLeft || window.screenX;
+			var availLeft = window.screen.availLeft != undefined ? window.screen.availLeft : browserLeftPos > availWidth ? availWidth : 0;
+			var availTop = window.screen.availTop != undefined ? window.screen.availTop : 0;
+
+			var url = '/themeplace/scienceLab/popup/contentPopup?lnbMenuSeq='+ lnbMenuSeq;
+			var options = 'top=' + availTop + ',left=' + availLeft + ',width=' + availWidth + ',height=' + availHeight + ',screenX=' + availLeft + ',screenY=' + availTop + ',toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=1,scrolling=0,scrollbars=no';
+
+			var popPeriodViewer = window.open(url, "contentPopup", options);
+			if (window.focus) {
+				popPeriodViewer.focus();
+			}
+		}
+
+		/*]]>*/
+	</script>
+	<div id="wrapper" class="scienceLabSub">
+		<header id="headerSub"  class="scLabHeader">
+			<div class="container">
+				<div class="util">
+					<a href="#" class="guide">실험실 활용 안내</a>
+					<a href="#" class="intro">선생님 소개</a>
+				</div>
+				<h1><a href="/themeplace/scienceLab/main"><img th:src="@{/resources/images/common/logo/logo_scienceLab.png}" alt="과학 가상 실험실"></a></h1>
+				<h2><a href="/main" target="_blank"><img th:src="@{/resources/images/common/logo/link_vivasam.png}" alt="비바샘 로고"></a></h2>
+				<!-- 로그인 후 -->
+				<div class="logout" th:if="${@sessionUtils.isLogin()}">
+					<span class="teacher" th:text="|${@sessionUtils.getMember().name} 선생님, 안녕하세요.|"></span>
+					<button type="button" onclick="javascript: _logout();" id="loginBtn">로그아웃</button>
+				</div>
+				<!-- //로그인 후 -->
+
+				<!-- 로그인 전 -->
+				<div class="login" th:if="${!@sessionUtils.isLogin()}">
+					<form action="/member/signInVivasam.do" method="POST" id="quickLoginFrm" name="quickLoginFrm">
+						<ul>
+							<li>
+								<input type="text" name="userId" id="userId" value="" style="ime-mode:disabled;" placeholder="아이디" title="아이디">
+							</li>
+							<li>
+								<input type="password" name="userPwd" id="userPwd" value="" placeholder="비밀번호" title="비밀번호">
+								<input type="hidden" name="goURL" th:value="${goUrl}" />
+							</li>
+							<li>
+								<a href="javascript:void(0);" onclick="javascript: _login('quickLoginFrm')" id="loginBtn">로그인</a>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<!-- //로그인 전 -->
+			</div>
+		</header>
+		<div id="ContentSub">
+			<div class="navWrap">
+				<div class="container">
+					<nav>
+						<ul class="tab1">
+							<!-- 학년 콤보 -->
+							<li class="gradeCode" th:attr="data-value=${subMenu.grade}">
+								<button type="button" id="gradeText" class="btnDepth01">[[${subMenu.gradeNm}]]</button>
+								<ul class="tab2" id="gradeUl">
+									<li th:each="item,index : ${gradeList}" th:attr="data-value=${item.code}" >
+										<a href="javascript:void(0)" th:text="${item.name}" th:classappend="${item.code eq subMenu.grade} ? on : ''"></a>
+									</li>
+								</ul>
+							</li>
+							<!-- 학기 콤보 -->
+							<li class="semesterCode" th:attr="data-value=${subMenu.semester}">
+								<button type="button" id="semesterText" class="btnDepth01">[[${subMenu.semesterNm}]]</button>
+								<ul class="tab2" id="semesterUl">
+									<li th:each="item,index : ${semesterList}" th:attr="data-value=${item.codeId}" >
+										<a href="javascript:void(0)" th:classappend="${item.codeId eq subMenu.semester} ? on : ''"
+										th:text="${item.codeName}">
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- 개념 콤보 -->
+							<li class="sectionCode" th:attr="data-value=${subMenu.section}">
+								<button type="button" id="sectionText" class="btnDepth01" th:text="${#strings.replace(subMenu.sectionNm,'<br>','')}"></button>
+								<ul class="tab2" id="sectionTab">
+									<li th:each="item,index : ${sectionList}" th:attr="data-value=${item.codeId}, data-seq=${item.lnbMenuSeq}">
+										<a th:href="|/themeplace/scienceLab/sub?lnbMenuSeq=${item.lnbMenuSeq}|"  th:classappend="${item.codeId eq subMenu.section} ? on : ''"
+										th:text="${#strings.replace(item.codeName,'<br>','')}">
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="subConWrap">
+				<div class="container">
+					<div class="conts">
+						<a class="btnFull" th:href="|javascript:popContentViewer('${subInfo.lnbMenuSeq}')|">
+							<img th:src="@{/resources/images/themeplace/scienceLab/btn_full.png}" alt="전체화면"
+								  ></a>
+						<div class="conTollWrap">
+							<!-- 콘텐츠 영상은 .conToll 안에 삽입 -->
+							<div class="conToll" id="conToll">
+								<iframe id="contentFrame" frameborder="0" width="lnbMenuSeq100%" height="100%" scrolling="no"></iframe>
+							</div>
+							<!-- PC 크롬이 아닐 때 -->
+							<div class="exCont" style="display: none;">
+								<h3>죄송합니다.</h3>
+								<p>초등 과학 가상실험실은<br>PC 환경의  <a title="새창열림" href="//google.com/chrome" target="_blank" rel="noopener noreferrer">크롬 브라우저</a>로<br>이용하실 수 있습니다.
+								</p>
+							</div>
+						</div>
+						<div class="arTxt">
+							<p>* PC환경에 따라 로딩이 오래 걸릴 수 있으니, 조금만 기다려 주세요.</p>
+							<!-- AR 기능이 있는 콘텐츠의 경우에만 안내문구 노출 -->
+							<p th:if="${subInfo.lnbMenuSeq == 81}">* AR 카메라 인식 기능은 <strong>초등 과학 가상 실험실 앱</strong>에서 제공됩니다.</p>
+						</div>
+						<div class="btnWrap">
+							<a class="btn01" href="#" th:attr="data-content-id=${subMenu.classPlanCid},data-content-gubun=${subMenu.contentGubun},data-file-type=${subMenu.fileType}" >
+								<img th:src="@{/resources/images/themeplace/scienceLab/btn01.png}" alt="수압지도안">
+							</a>
+							<a class="btn02" href="#" th:attr="data-content-id=${subMenu.workSheetCid},data-content-gubun=${subMenu.workContentGubun},data-file-type=${subMenu.workFileType}">
+								<img th:src="@{/resources/images/themeplace/scienceLab/btn02.png}" alt="활동지">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- [DEV] 기존에 관련 차시 자료, 관련 단원별 자료(차시자료 없는 영역) 두개로 나뉘어져 있던 자료들이 연계자료로 변경됨 -->
+			<div class="subChasi">
+				<div class="container">
+					<h3>연계 자료</h3>
+					<div class="dataListWrap">
+						<th:block  th:if="${#lists.size(linkInfos)} > 0">
+							<div class="dataTit">
+								<a th:href="${linkInfos[0].link}" target="_blank">
+									<div class="txtWrap">
+										<strong class="tit">[[${linkInfos[0].subjectName}]]</strong>
+										<span class="subTit">
+											[[${linkInfos[0].title}]]
+											<th:block  th:if="${linkInfos[0].type == 'NES'}">
+												<em class="mark">국정</em>
+											</th:block>
+										</span>
+									</div>
+									<span class="labelLink">단원 바로가기</span>
+								</a>
+							</div>
+						</th:block>
+						<th:block  th:if="${periodList != null}">
+							<div class="dataItem" th:each="item,index : ${periodList}">
+								<a th:href="'javascript:popPeriodViewer(\'' + ${item.periodId} +'\');'">
+									<div class="txtWrap"><p>[[${item.periodName}]]</p></div>
+									<div class="btn_chapter"><span></span>차시열기</div>
+								</a>
+							</div>
+						</th:block>
+						<th:block  th:if="${#lists.size(linkInfos)} > 1">
+							<div class="dataTit">
+								<a th:href="${linkInfos[1].link}" target="_blank">
+									<div class="txtWrap">
+										<strong class="tit">[[${linkInfos[1].subjectName}]]</strong>
+										<span class="subTit">
+											[[${linkInfos[1].title}]]
+											<th:block  th:if="${linkInfos[1].type == 'NES'}">
+												<em class="mark">국정</em>
+											</th:block>
+										</span>
+									</div>
+									<span class="labelLink">단원 바로가기</span>
+								</a>
+							</div>
+						</th:block>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="scLabFooter">
+			<div class="logo"><span class="blind">비상</span></div>
+			<ul class="link">
+				<li><a href="/member/term.do" target="_blank" title="새창열림">서비스 이용약관</a></li>
+				<li><a href="/member/privacy.do" target="_blank" title="새창열림">개인정보 처리방침</a></li>
+			</ul>
+			<ul class="info">
+				<li>
+					<span>(주)비상교육</span>
+					<span>대표자명 : 양태회</span>
+					<span>사업자등록번호 : 211-87-07735</span>
+				</li>
+				<li>
+					<span>㈜비상교육주소: 서울특별시 구로구 디지털로33길 48 대룡포스트타워 7차 20층</span>
+					<span>TEL : 1544-7714 (선생님 전용 고객센터)</span>
+					<span>MAIL : <a href="mailto:vivasam@visang.com">vivasam@visang.com</a></span>
+				</li>
+				<li class="copyright">COPYRIGHT(C) (주)비상교육 ALL RIGHTS RESERVED.</li>
+			</ul>
+		</footer>
+	</div><!-- //wrapper -->
+
+	<th:block th:include="themeplace/scienceLab/popup/laboratoryInfo" />
+	<th:block th:include="themeplace/scienceLab/popup/teacherInfo" />
+
+</div>
+
+
+</html>
+

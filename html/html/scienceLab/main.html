@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>초등 과학 가상 실험실 | 비바샘</title>
+	<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="../../js/scienceLab/common.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+	<link rel="stylesheet"type="text/css" href="../../css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../css/scienceLab/scienceLab.css">
+</head>
+<body>
+<div id="wrapper">
+	<div class="mainWrap">
+		<header id="headerMain" class="scLabHeader">
+			<div class="container">
+				<h1><img src="../../img/scienceLab/logo_visang_ww.png" alt="비상 로고"></h1>
+				<h2><a href="/" target="_blank"><img src="../../img/scienceLab/link_vivasam_w.png" alt="비바샘 로고"></a></h2>
+				<!--로그인 전-->
+				<div class="login">
+					<form action="">
+						<ul>
+							<li><input type="text" name="userId" id="userId" value="" style="ime-mode:disabled;" placeholder="아이디" title="아이디"></li>
+							<li><input type="password" name="userPwd" id="userPwd" value="" placeholder="비밀번호" title="비밀번호"></li>
+							<li><a href="#" id="loginBtn">로그인</a></li>
+						</ul>
+					</form>
+				</div>
+				<!--//로그인 전-->
+				<!--로그인 후 
+				<div class="logout">
+					<span class="name">비바샘2</span><span class="teacher">선생님</span><button>로그아웃</button>
+				</div>-->
+				<!--//로그인 후-->
+			</div>
+		</header>
+		<div id="conMain">
+			<div class="container">
+				<div class="util">
+					<a href="#" class="guide">실험실 활용 안내</a>
+					<a href="#" class="intro">선생님 소개</a>
+					<img src="../../img/scienceLab/utilTxt.png" alt="모바일 앱을 다운받고 온라인 수업에 활용하세요!">
+				</div>
+				<h3><img src="../../img/scienceLab/mainTitle.png" alt="초등 과학 가상 실험실"></h3>
+				<div class="tabWarp">
+					<ul class="tabGrade">
+						<li rel="tab1"><a href="#">3학년</a></li>
+						<li rel="tab2"><a href="#">4학년</a></li>
+						<li rel="tab3"><a href="#">5학년</a></li>
+						<li rel="tab4"><a href="#">6학년</a></li>
+					</ul>
+					<div class="tabConWrap">
+						<!-- default -->
+						<div class="tabCon defaultTab">
+							<p class="deTxt01">가상 실험실 도구 조작으로 과학 원리를 쉽게 습득,<br>안전하고 다양한 실험을 할 수 있는 모의 실험실입니다.</p>
+							<p class="deTxt02">학년 선택으로 생생한 체험을 시작하세요!</p>
+						</div>
+						<!-- 3학년 -->
+						<div class="tabCon grade3" id="tab1">
+							<ul class="tabClass list3">
+								<li rel="tabBox1" class="tabOn"><a href="#">동물의 특징</a></li>
+								<li rel="tabBox2"><a href="#">지표의 변화</a></li>
+								<li rel="tabBox3"><a href="#">소리의 세기와 높낮이</a></li>
+							</ul>
+							<section>
+								<div class="tabTxtBox" id="tabBox1">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>동물의 특징</p>
+												<span>- 생활 환경에 따라 동물의 특징이 어떻게 다른지 알아보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox2">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>흙이 만들어지는 과정</p>
+												<span>- 흙은 어떻게 만들어지는지 알아보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>지표의 변화</p>
+												<span>- 흐르는 물은 지표를 어떻게 변화시키는지 알아보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구3</span>지형의 변화</p>
+												<span>- 파도는 지형을 어떻게 변화시키는지 알아보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox3">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>소리의 크기</p>
+												<span>- 큰 소리와 작은 소리를 내어보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>소리의 높낮이</p>
+												<span>- 높은 소리와 낮은 소리를 내어 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구3</span>지형의 변화</p>
+												<span>- 소리가 어떻게 전달되는지 알아보아요.</span>								
+											</li>
+										</ul>
+									</a>
+							</div>
+							</section>
+						</div>
+						<!-- 4학년 -->
+						<div class="tabCon grade4" id="tab2">
+							<ul class="tabClass list4">
+								<li rel="tabBox4" class="tabOn"><a href="#">다양한 곳에 사는 식물</a></li>
+								<li rel="tabBox5"><a href="#" class="break">물의 상태변화에 따른<br>부피와 무게 변화</a></li>
+								<li rel="tabBox6"><a href="#">그림자와 거울</a></li>
+								<li rel="tabBox7"><a href="#">화산 활동으로 나오는 물질</a></li>
+							</ul>
+							<section>
+								<div class="tabTxtBox" id="tabBox4">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>사는 곳에 따른 식물의 특징</p>
+												<span>- 사는 곳에 따라 식물을 분류해 보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox5">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>물이 얼 때의 부피와 무게 변화</p>
+												<span>- 물이 얼 때의 부피와 변화를 관찰해 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>얼음이 녹을 때의 부피와 무게 변화</p>
+												<span>- 얼음이 녹을 때의 부피와 변화를 관찰해 보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox6">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>그림자의 모양과 크기</p>
+												<span>- 그림자의 모양과 크기를 변화시켜 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>빛의 반사</p>
+												<span>- 거울을 이용해서 빛이 나아가는 모습을 알아보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox7">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>화산 분출 모형실험</p>
+												<span>- 화산 분출 모습을 모형으로 알아보아요.</span>								
+											</li>
+										</ul>
+									</a>	
+								</div>
+							</section>
+						</div>
+						<!-- 5학년 -->
+						<div class="tabCon grade5" id="tab3">
+							<ul class="tabClass list4">
+								<li rel="tabBox8" class="tabOn"><a href="#">생물과 환경</a></li>
+								<li rel="tabBox9"><a href="#">이슬, 안개, 구름</a></li>
+								<li rel="tabBox10"><a href="#">물체의 빠르기</a></li>
+								<li rel="tabBox11"><a href="#">산과 염기</a></li>
+							</ul> 
+							<section>
+								<div class="tabTxtBox" id="tabBox8">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>생물의 먹이 관계</p>
+												<span>- 먹이 사슬과 먹이 그물로 생물의 먹이 관계를 알아보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>비생물 요소가 생물에 미치는 영향</p>
+												<span>- 비생물 요소가 생물에 미치는 영향을 알아보아요.</span>						
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox9">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>이슬 발생 실험</p>
+												<span>- 이슬의 생성 과정을 알아보아요.</span>
+											</li>
+											<li>
+												<p><span>탐구2</span>안개 발생 실험</p>
+												<span>- 안개의 생성 과정을 알아보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구3</span>구름 발생 실험</p>
+												<span>- 구름의 생성 과정을 알아보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox10">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>일정한 거리를 이동한 물체의 빠르기</p>
+												<span>- 일정한 거리를 이동한 물체의 빠르기를 비교해 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>정한 시간 동안 이동한 물체의 빠르기</p>
+												<span>- 일정한 시간 동안 이동한 물체의 빠르기를 비교해 보아요.</span>						
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox11">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>용액의 분류</p>
+												<span>- 지시약을 이용해 여러 가지 용약을 분류해 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>용액의 성질</p>
+												<span>- 산성 용약과 염기성 용액에 물질을 넣어 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구3</span>용액의 성질 변화</p>
+												<span>- 산성 용액과 염기성 용액을 섞어 보아요.</span>								
+											</li>
+										</ul>
+									</a>
+								</div>
+							</section>
+						</div>
+						<!-- 6학년 -->
+						<div class="tabCon grade6" id="tab4">
+							<ul class="tabClass list3">
+								<li rel="tabBox12" class="tabOn"><a href="#">전기 회로와 전자석</a></li>
+								<li rel="tabBox13"><a href="#">계절의 변화</a></li>
+								<li rel="tabBox14"><a href="#">우리 몸의 구조와 기능</a></li>
+							</ul>
+							<section>
+								<div class="tabTxtBox" id="tabBox12">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>전기 회로 만들기</p>
+												<span>- 전기 회로를 만들어 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>전자석의 성질</p>
+												<span>- 전자석의 성질을 알아보아요.</span>						
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox13">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>계절의 변화</p>
+												<span>- 계절이 변하는 까닭을 알아보아요.</span>
+											</li>
+										</ul>
+									</a>
+								</div>
+								<div class="tabTxtBox" id="tabBox14">
+									<a href="#a">
+										<ul>
+											<li>
+												<p><span>탐구1</span>인체 모형 만들기</p>
+												<span>- 인체 모형을 만들어 보아요.</span>								
+											</li>
+											<li>
+												<p><span>탐구2</span>뼈와 근육</p>
+												<span>- 뼈와 근육 모형을 만들어 보아요.</span>						
+											</li>
+											<li>
+												<p><span>탐구2</span>우리 몸의 기관</p>
+												<span>- 우리 몸에 있는 기관의 종류와 기능을 알아보아요.</span>						
+											</li>
+										</ul>
+									</a>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="scLabFooter">
+		<div class="logo"><span class="blind">비상</span></div>
+		<ul class="link">
+			<li><a href="#a">서비스 이용약관</a></li>
+			<li><a href="#a">개인정보 처리방침</a></li>
+		</ul>
+		<ul class="info">
+			<li>
+				<span>(주)비상교육</span>
+				<span>대표자명 : 양태회</span>
+				<span>사업자등록번호 : 211-87-07735</span>
+			</li>
+			<li>
+				<span>㈜비상교육주소: 서울특별시 구로구 디지털로33길 48 대룡포스트타워 7차 20층</span>
+				<span>TEL : 1544-7714 (선생님 전용 고객센터)</span>
+				<span>MAIL : <a href="mailto:vivasam@visang.com">vivasam@visang.com</a></span>
+			</li>
+			<li class="copyright">COPYRIGHT(C) (주)비상교육 ALL RIGHTS RESERVED.</li>
+		</ul>
+	</footer>
+</div><!-- //#wapper -->
+
+<div class="dim"></div>
+<div id="popupGuide" class="popUp">
+	<div class="popTop">
+		<h1>초등 과학 가상 실험실이란?</h1>
+		<a class="btnClose" href="#"><img src="../../img/scienceLab/popClose.png" alt="닫기"></a>
+	</div>
+	<div class="popCon">
+		<div class="con1">
+			<p>수업이 더 재미있어지는 과학 가상 실험실</p>
+			<span class="txt">초등 교육 과정의 과학 개념을 가상의 환경에서 함께 호기심을 해결하고, 실험 설계 능력을 키울 수 있습니다.</span>
+			<ul>
+				<li><img src="../../img/scienceLab/popCon01.png" alt="위험한 실험 약품도 원하는 만큼 안전하게"></li>
+				<li><img src="../../img/scienceLab/popCon02.png" alt="게임 형식으로 쉽고 재미있게"></li>
+				<li><img src="../../img/scienceLab/popCon03.png" alt="원하는 조합을 다양하게 시도해 보며 호기심 충족"></li>
+			</ul>
+		</div>
+		<div class="con2">
+			<p>온라인/오프라인 걱정 없는 수업 지원</p>
+			<img src="../../img/scienceLab/popCon04.png">
+			<span class="blind">학교에서는 큰 화면으로 학생들과 함께 가상 실험을 할 수 있습니다.</span>
+			<span class="blind">온라인 수업에서는 태블릿과 스마트폰에 ‘초등 과학 가상 실험실 앱’ 설치 후 실험할 수 있습니다.</span>
+		</div>
+		<div class="spec">
+			<p>* PC에서 콘텐츠를 정상적으로 확인하기 위해 아래의 권장사양을 확인해 주세요.</p>
+			<table summary="PC 권장 사양, PC최소 사양 테이블" width="860">
+				<caption>수업 자료실</caption>
+				<colgroup>
+					<col width="140px">
+					<col width="360px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th></th>
+						<th>PC 권장 사양</th>
+						<th>PC 최소 사양</th>
+					</tr>
+					<tr>
+						<td>운영체제</td>
+						<td>Window8 이상</td>
+						<td>Window7 SP1 이상</td>
+					</tr>
+					<tr>
+						<td>브라우저</td>
+						<td>크롬, MS edge, 파이어폭스, 사파리<br>* IE(Internet Explorer)에서는 작동하지 않습니다.</td>
+						<td>크롬, MS edge, 파이어폭스, 사파리</td>
+					</tr>
+					<tr>
+						<td>메모리</td>
+						<td>2GB 이상</td>
+						<td>2GB 이상</td>
+					</tr>
+					<tr>
+						<td>해상도</td>
+						<td>가로 1280</td>
+						<td>가로 1280</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>* <span>‘초등 과학 가상 실헙실 앱’</span>은 Google Play · App Store 에서 다운받으실 수 있습니다.</p>
+		</div>
+	</div>
+</div>
+<div id="popupTeacher" class="popUp">
+	<div class="popTop">
+			<h1>초등 과학 가상 실험실 선생님 소개</h1>
+			<a class="btnClose" href="#"><img src="../../img/scienceLab/popClose.png" alt="닫기"></a>
+	</div>
+	<div class="popCon">
+			<div class="teacherBox">
+					<p><strong>인천삼산초등학교</strong> 박찬 선생님</p>
+					<ul>
+							<li>교육학 박사</li>
+							<li>대우자동차 기술연구소 연구원</li>
+							<li>올해의 과학교사상 수상</li>
+							<li>경인교육대학교 강사</li>
+							<li>스팀교사연구회 책임연구원</li>
+					</ul>
+			</div>
+			<div class="teacherBox">
+					<p><strong>인천미송초등학교</strong> 김병석 선생님</p>
+					<ul>
+							<li>창의재단 스팀교사연구회 연구원</li>
+							<li>前 한국과학문화협회 이사</li>
+							<li>청소년과학탐구반(YSC) 인천지역 사무국장</li>
+							<li>우리아이 AI, 에듀테크 FOR 클래스룸 외 다수 저서 집필</li>
+							<li>1급정교사 연수 강사 외 다수</li>
+					</ul>
+			</div>
+			<div class="teacherBox">
+					<p><strong>전남청계초등학교</strong> 한도윤 선생님</p>
+					<ul>
+							<li>전남 과학과 컨설팅 위원, 실험실안전연수 출강</li>
+							<li>전남 1정 멘토, 2020. 서울 경남 1정 강의 출강</li>
+							<li>올해의 과학교사상 수상</li>
+							<li>EBS 행복한 교육세상, TVN&nbsp; 리틀 빅히어로 등 출연</li>
+							<li>유튜브보다 더 재미있는 어린이 과학실험 집필</li>
+					</ul>
+			</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>어휘톡 이벤트</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../../js/event/visangEvent05.js"></script>
+  <link rel="stylesheet" href="../../css/event/visangEvent05.css">
+</head>
+<body>
+	<!-- eventWrap -->
+	<div id="eventWrap">
+    <div class="top_menu">
+			<div class="logo">
+				<img src="../../img/event/visangEvent05/logo.png" alt="비상">
+			</div>
+			<div class="menu">
+				<div id="divLogIn">
+					<a href="javascript:void(0)" class="join">회원가입</a><a href="javascript:void(0)" onclick="btnLogIn_Click" class="login">로그인</a>
+				</div>
+				<div id="divLogOut" style="display:none">
+					<a href="javascript:void(0)" class="modify">개인정보수정</a><a href="javascript:void(0)" onclick="btnLogOut_Click" class="logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+	    <div class="area-01">
+			<div class="wrap">
+				<div class="blind">
+					<strong>국어 전문가가 사용하는 초등 어휘력 교사</strong>
+          <h1>어휘톡! 강의 무료 공개 이벤트</h1>
+          <p>새학기 기념 민성원 연구소의 어휘톡! 강의를 일부 공개합니다.</p>
+          <p>어휘톡!은 어휘와 문법, 독해까지 학습할 수 있어 수업시간에 직접 사용하는 교재입니다.</p>
+				</div>
+			</div>
+		</div>
+    <div class="area-02">
+			<div class="wrap">
+        <h2><span class="blind">어휘톡! 1학기 강의</span></h2>
+        <ul class="tabBtnWrap">
+          <li class="on"><a href="#a">1단계</a></li>
+          <li><a href="#a">3단계</a></li>
+          <li><a href="#a">5단계</a></li>
+          <li><a href="#a">7단계</a></li>
+          <li><a href="#a">9단계</a></li>
+          <li><a href="#a">11단계</a></li>
+        </ul>
+        <!--1단계-->
+        <div class="tabConWrap" style="display:block;">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1주차</th>
+                <td>1강<a href="https://youtu.be/MsbNwng9chk" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>2강<a href="https://youtu.be/rJlq91hHiMY" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>3강<a href="https://youtu.be/HAwzlpaaHTk" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>4강<a href="https://youtu.be/g2Tcza33cWA" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>5강<a href="https://youtu.be/ZeaNHN8WvUw" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+              <tr>
+                <th>2주차</th>
+                <td>6강<a href="https://youtu.be/YdiOaak6VG0" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>7강<a href="https://youtu.be/_xTOWhjHfBk" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>8강<a href="https://youtu.be/jkKyeSfAGgc" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>9강<a href="https://youtu.be/-0vzHepyHeY" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>10강<a href="https://youtu.be/uQFf3gK6lgY" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--3단계-->
+        <div class="tabConWrap">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1주차</th>
+                <td>1강<a href="https://youtu.be/3dQeROqDD-Q" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>2강<a href="https://youtu.be/IYV095K2MGo" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>3강<a href="https://youtu.be/9Cj-LR6g7Kk" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>4강<a href="https://youtu.be/vVpEdp0GW8Q" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>5강<a href="https://youtu.be/lMaV4_tOFiM" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+              <tr>
+                <th>2주차</th>
+                <td>6강<a href="https://youtu.be/A30sm91VRsQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>7강<a href="https://youtu.be/E02fIn7ap58" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>8강<a href="https://youtu.be/RItvHx9FLuQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>9강<a href="https://youtu.be/L1x-hdYkseo" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>10강<a href="https://youtu.be/RKjPjFX-RfI" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--5단계-->
+        <div class="tabConWrap">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1주차</th>
+                <td>1강<a href="https://youtu.be/nwBQG0hRYQ4" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>2강<a href="https://youtu.be/QPkIGePWlBQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>3강<a href="https://youtu.be/nwBQG0hRYQ4" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>4강<a href="https://youtu.be/WqrdiOdxzuI" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>5강<a href="https://youtu.be/LDZlYNiN8-s" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+              <tr>
+                <th>2주차</th>
+                <td>6강<a href="https://youtu.be/YpQjG56tmSE" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>7강<a href="https://youtu.be/HK_CJEX-Fjk" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>8강<a href="https://youtu.be/sjbqx4WKo1A" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>9강<a href="https://youtu.be/UjtBOkcrRHg" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>10강<a href="https://youtu.be/LAYFM7WiSPQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--7단계-->
+        <div class="tabConWrap">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1주차</th>
+                <td>1강<a href="https://youtu.be/m0WXwUOmEkY" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>2강<a href="https://youtu.be/x-q4QSsi2e4" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>3강<a href="https://youtu.be/mJ7rpwZwNSY" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>4강<a href="https://youtu.be/yi7R_Qyoa3o" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>5강<a href="https://youtu.be/0TgQHCgamcs" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+              <tr>
+                <th>2주차</th>
+                <td>6강<a href="https://youtu.be/qBz4IufgcP4" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>7강<a href="https://youtu.be/ggJHhhKx9MU" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>8강<a href="https://youtu.be/K_d6DJ_pITI" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>9강<a href="https://youtu.be/4FnwRpeUFIQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>10강<a href="https://youtu.be/l-VqBvNYs5A" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--9단계-->
+        <div class="tabConWrap">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1주차</th>
+                <td>1강<a href="https://youtu.be/czTng4zcR3E" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>2강<a href="https://youtu.be/DXmVNXJUqb0" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>3강<a href="https://youtu.be/pTE3-PIPrpQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>4강<a href="https://youtu.be/FM3OPRl6Zd8" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>5강<a href="https://youtu.be/Z8tTaRkH3cM" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+              <tr>
+                <th>2주차</th>
+                <td>6강<a href="https://youtu.be/T1EJYR4Pl5k" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>7강<a href="https://youtu.be/5jFKth0x_yw" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>8강<a href="https://youtu.be/ng9pJfwSTzY" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>9강<a href="https://youtu.be/8fLiGa1sRuA" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>10강<a href="https://youtu.be/Er2BfMeUqV0" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--11단계-->
+        <div class="tabConWrap">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+                <th>금요일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1주차</th>
+                <td>1강<a href="https://youtu.be/yXDrdLdYwDc" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>2강<a href="https://youtu.be/S3VDdiv7WSg" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>3강<a href="https://youtu.be/wTipbYtiCdg" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>4강<a href="https://youtu.be/H0ToBDj4qYo" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>5강<a href="https://youtu.be/dGIiOcWynbU" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+              <tr>
+                <th>2주차</th>
+                <td>6강<a href="https://youtu.be/icOtoHdUBlg" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>7강<a href="https://youtu.be/QQUIuBjUA2M" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>8강<a href="https://youtu.be/ncgNr0UNFLQ" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>9강<a href="#a" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+                <td>10강<a href="https://youtu.be/TXlWdVIjL4E" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnPlay.png" alt="강의재생"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="blind">※ 1학기 강의 중 일부 공개</p>
+      </div>
+		</div>
+    <div class="area-03">
+			<div class="wrap">
+				<div class="blind">
+          <h2>어휘톡! 강의 공유 이벤트</h2>
+          <p>어휘톡! 강의 소감과 함께 이벤트 페이지를 공유해주세요!</p>
+          <p>이벤트 참여해주신 분 중 100명을 추첨해 '스타벅스 아메리카노 기프티콘'을 드립니다.</p>
+          <ul>
+            <li>참여 기간: 3월 2일(수) ~ 3월 31일(목)</li>
+            <li>당첨자 발표: 4월 13일(수)</li>
+          </ul>
+				</div>
+        <a class="btnUrl" href="#a" onclick="clip(); return false;"><img src="../../img/event/visangEvent05/btnUrl.png" alt="URL 복사하기"></a>
+        <div class="btnWrap">
+          <a href="http://naver.me/xi2VNj3F" target="_blank" title="새창열림"><img src="../../img/event/visangEvent05/btnApply.png" alt="응모하기"></a>
+        </div>
+			</div>
+		</div>
+    <div class="area-04">
+			<div class="wrap">
+				<div class="blind">
+          <h2>어휘톡! 특별함</h2>
+          <ul>
+            <li>1. 초등 전 과목 필수 어휘 수록</li>
+            <li>2. 필수 어휘와 관련된 어휘, 어법, 독해까지 한 번에</li>
+            <li>3. 하루 4쪽, 4주 완성으로 성취감 향상!</li>
+          </ul>
+          <strong>어휘톡! 학습 단계 선택 가이드</strong>
+          <table>
+           <thead>
+            <tr>
+              <th>대상 학년</th>
+              <th>예비 초등 ~ 1학년</th>
+              <th>2학년</th>
+              <th>3학년</th>
+              <th>4학년</th>
+              <th>5학년</th>
+              <th>6학년</th>
+            </tr>
+           </thead>
+           <tbody>
+              <tr>
+                <th>1학기</th>
+                <td>1단계</td>
+                <td>3단계</td>
+                <td>5단계</td>
+                <td>7단계</td>
+                <td>9단계</td>
+                <td>11단계</td>
+             </tr>
+             <tr>
+              <th>2학기</th>
+              <td>2단계</td>
+              <td>4단계</td>
+              <td>6단계</td>
+              <td>8단계</td>
+              <td>10단계</td>
+              <td>12단계</td>
+            </tr>
+           </tbody>
+          </table>
+				</div>
+			</div>
+		</div>
+    <div class="area-info">
+			<div class="wrap">
+				<div class="blind">
+					<h2>꼭 알아두세요!</h2>
+          <ul>
+						<li>개인정보가 확인되지 않는 경우 당첨이 취소될 수 있습니다.</li>
+						<li>동일한 개인정보로 당첨되었을 경우 당첨이 취소될 수 있습니다.</li>
+						<li>연락처가 부정확하여 경품을 수령하지 못하신 경우 재발송이 불가하며 선정이 취소됩니다.</li>
+            <li>부정 참여로 간주될 경우 당첨자 선정에서 제외될 수 있습니다.</li>
+            <li>강의 저작권은 ‘민성원 연구소’에 있으며, 3주차, 4주차 강의는 추후 민성원 연구소에서 수강할 수 있습니다.</li>
+            <li>강의 수강 후기는 비상교육 마케팅에 이용될 수 있습니다.</li>
+            <li>본 이벤트는 PC 및 모바일 모두 참여 가능합니다.</li>
+					</ul>
+				</div>
+				<a href="#a" target="_blank" title="새창열림" class="btnPrivacy"><img src="../../img/event/visangEvent05/btn_privacy.png" alt="개인정보확인"></a>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="footer_inner">
+				<ul>
+					<li><a href="http://www.visang.com/" target="_blank">회사소개</a><span>|</span></li>
+					<li><a href="https://book.visang.com/customer/newsretrieve.aspx" target="_blank">고객센터</a><span>|</span></li>
+					<li><a href="https://book.visang.com/etc/sitemap.aspx" target="_blank">사이트맵</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/customer/contactus.aspx" target="_blank">오시는길</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/customer/subcompretrieve.aspx" target="_blank">지사안내</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/member/privacy.aspx" target="_blank" class="privacy"><strong>개인정보처리방침</strong></a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/member/agreement.aspx" target="_blank">이용약관</a></li>
+				</ul>
+				<p class="addr">(주)비상교육 | 주소 : 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 20층 | 대표자명 : 양태회<br>사업자등록번호 : 211-87-07735 | 통신판매업 신고번호 : 제 2006-02731호 | TEL : 1544-0554 | FAX : (02) 6970-6148<br>대표메일 : webmaster@visang.com</p>
+				<p class="copyright">Copyright ⓒ 비상교육. ALL rights reserved. <a href="#a" class="btn_myinfo" target="_blank">정보조회</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //eventWrap -->
+
+
+</body></html>

@@ -1,0 +1,153 @@
+/*layout*/
+body {position:relative;margin:0;padding:0;font-weight:300;font-family:'noto sans KR', 'NanumGothic', sans-serif;background:#FFF;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+
+/*Main*/
+.mainWrap {position:relative;max-width:720px;margin:auto;}
+.mainWrap img {width:100%;}
+.mainWrap .top {padding:10% 0 7% 0;}
+.mainWrap .top h1 {width:70%;margin:auto;margin-bottom:3%;}
+.mainWrap .top .banner {display:inline-block;width:65%;margin:0 0 0 5%;}
+.mainWrap .top .banner img {border-radius:10px;}
+.mainWrap .top .emailBtn {width:25%;}
+.mainWrap .top .emailBtn img {width:100%;border-radius:10px;}
+.mainWrap .top .txt {text-align:center;padding-top:2%;}
+.mainWrap .cont {text-align:center;}
+.mainWrap .cont ul {width:60%;margin:auto;}
+.mainWrap .cont ul:after {display:block;content:"";clear:both;}
+.mainWrap .cont ul li {float:left;width:45%;margin-bottom:10%;box-shadow:5px 5px 5px #999;}
+.mainWrap .cont ul li:nth-child(2n) {margin-left:10%;}
+.mainWrap .cont ul li a {display:block;width:100%;}
+.mainWrap .mainLogo {width:15%;margin:10% auto;}
+/*Page*/
+.wrap {position:relative;max-width:720px;padding:0 0 50px 10px;}
+.topTitle h1 {padding:3% 0 1% 1%;margin:2% 0 3% 1%;background:url('../../../img/digitalContents/22eeisee/visang_logo.png') right top no-repeat;background-size:12%;}
+.topTitle h1 img {width:78%;}
+
+.tabA ul li {float:left;text-align:center;margin-right:1.5%;}
+.tabA ul li:last-child {margin-right:0;}
+.tabA.list2 ul li {width:49%;}
+.tabA.list3 ul li {width:32.32%;}
+.tabA.list4 ul li {width:23.87%;}
+.tabA.list5 ul li {width:18.8%;}
+.tabA ul li a {display:block;width:100%;padding:2.3% 0;font-size:20px;letter-spacing:-1px;vertical-align:middle;color:#FFF;background:#CCC;box-sizing:border-box;}
+.tabA ul li.on a {background:#4c7bc2;}
+
+.conWrap {position:relative;}
+.btnWrap {margin:0 0 4% 0;}
+.allDown {float:left;width:25%;}
+.allDown img {width:100%;}
+.err {float:right;width:6.5%;margin-left:1%;}
+.err img {width:100%;}
+.home {float:right;width:6.5%;}
+.home img {width:100%;}
+
+
+section {margin-bottom:4%;}
+h2 {margin-top:3%;padding:0 0 1% 3.5%;font-size:20px;font-weight:400;color:#0e83a0;letter-spacing:-1px;background:url('../../../img/digitalContents/22eeisee/icon.png') top 30% left 1% no-repeat;background-size:2%;}
+h3 {position:relative;padding:0 0 1% 4%;font-size:18px;font-weight:400;letter-spacing:-1px;color:#333;background:url('../../../img/digitalContents/22eeisee/ico.png') top 40% left 2% no-repeat;background-size:1.2%;}
+.bookTxt li {position:absolute;top:204px;width:25%;font-size:16px;text-align:center;font-weight:bold;padding:0.7% 0;color:#FFF;}
+.bookTxt li:nth-child(1) {background:#f37116;left:24%;}
+.bookTxt li:nth-child(2) {background:#3cbebb;left:70%;}
+.unit h3:after {position:absolute;right: 2%;top: 25%;display: block;content: "";width: 2.8%;height: 50%;background: url('../../../img/digitalContents/22eeisee/slide_down.png') no-repeat;background-size: 100%;}
+.unit h3.on:after {position:absolute;right: 2%;top: 25%;display: block;content: "";width: 2.8%;height: 50%;background: url('../../../img/digitalContents/22eeisee/slide_up.png') no-repeat;background-size: 100%;}
+table {width:100%;border-top:2px solid #CCC;border-bottom:2px solid #CCC;font-weight:400;font-family:'noto sans KR', 'NanumGothic', sans-serif;}
+table th {padding:5px 0;font-size:15px;border-bottom:2px solid #CCC;text-align:center;}
+table td {position:relative;padding:1% 0;font-size:14px;color:#444;text-align:center;letter-spacing:-0.5px;border-bottom:1.5px solid #DDD;line-height:1.1em;}
+table td.danwon {text-align:left;padding-left:2%;color:#0e83a0;}
+table td .txt {display:inline-block;padding:20px 7px 9px 0;font-size:14px;color:#777;}
+table td.divi {width:5%;}
+table td .tbTxt {position:absolute;top:37%;left:14%;display:block;font-size:12px;color:#777;}
+.unit h3 {border-bottom:2px solid #CCC;}
+.unit table {border-top:none;display:none;}
+.unit table td.danwon {width:13%;}
+.unit.type2 table td .tbTxt {left:-7%;}
+.unitB table .danwon {position:relative;width:15%;color:#3f7e42;font-size:17px;padding-left:4.4%;background:url('../../../img/digitalContents/22eeisee/ico_g.png') top 50% left 20% no-repeat;background-size:7%;}
+.errata table .danwon {position:relative;width:15%;color:#333;font-size:16px;padding-left:4.4%;background:url('../../../img/digitalContents/22eeisee/ico.png') top 50% left 18% no-repeat;background-size:7%;}
+
+.pdf table td a img {display:block;width:73%;}
+.unit.type1 table td a img {width:37.5%;}
+.unit.type2 table td a img {width:56%;}
+.unitB table td a img {width:72%;}
+.words table td a img {width:27.5%;}
+.answers table td a img {width:27.5%;}
+.errata table td a img {width:27.5%;}
+
+/*POP*/
+.popBg {display:none;position:fixed;left:0;right:0;top:0;bottom:0;width:100%;height:100%;background:#000;opacity:0.5;}
+.popWrap {display:none;position:absolute;top:15%;width:70%;padding:3% 3% 10% 3%;margin:0 10%;text-align:center;font-weight:500;border-radius:30px;background:#FFF;}
+.popWrap .closeBtn {position:absolute;right:10px;top:10px;display:block;width:13%;text-align:right;}
+.popWrap .closeBtn img {width:100%;}
+.popWrap h4 {font-size:26px;margin-top:15%;color:#444;letter-spacing:-1px;font-weight:500;}
+
+.errPopWrap>.btnTxt {width:90%;padding:5% 0;font-size:20px;color:#0086a7;border:1.5px solid #BBB;border-radius:10px;margin:5% auto;cursor:pointer;text-align:center;}
+.errPopWrap .moWrap {width:90%;padding:5% 0;font-size:20px;color:#888;border:1.5px solid #BBB;border-radius:10px;margin:5% auto;font-weight:500;}
+.errPopWrap .moWrap p {text-align:center;margin-top:0;color:#888;}
+.errPopWrap .moWrap span {display:inline-block;padding:0 8%;margin-top:2%;border-right:1px solid #AAA;font-size:20px;color:#0086a7;cursor:pointer;font-weight:500;}
+.errPopWrap .moWrap span:last-child {border-right:none;padding-right:3%;}
+
+.popWrap h5 {font-size:24px;margin-top:4%;color:#444;letter-spacing:-1px;text-align:left;width:25%;border-radius:10px;background:#c3deff;text-align:center;margin-left:4%;font-weight:400;}
+.popWrap p {text-align:left;font-size:22px;color:#001734;font-weight:500;margin-top:5%;padding-left:5%;}
+.popWrap ul {font-size:18px;text-align:left;padding:0 7%;margin-top:2%;color:#222;}
+.popWrap ul li {margin-bottom:1.5%;}
+.popWrap ul li strong {font-weight:800;}
+.popWrap ul.install {margin:3% auto 0 auto;width:50%;}
+.popWrap ul.install li {float:left;width:33.3%;text-align:center;}
+.popWrap ul.install li:last-child {margin-right:0;}
+.popWrap ul.install li a {display:inline-block;width:70%;}
+.popWrap ul.install li a img {width:100%;}
+.popWrap .errTxt {font-size:18px;text-align:left;padding:0 7%;margin-top:2%;color:#222;}
+.popWrap .errTxt strong {font-weight:800;}
+.popWrap .txt {display:block;font-size:14px;margin-top:2.5%;padding-bottom:5%;color:#74000b;border-bottom:1px dotted #AAA;}
+.popWrap .popQA {color:#222;font-weight:500;padding:0 2.5%;}
+.popWrap .popQA a {display:inline-block;border:1px solid #CCC;border-radius:5px;padding:0 2%;}
+.popWrap .insTit {text-align:center;padding-left:0;margin-top:6%;padding-top:5%;border-top:1px dotted #AAA;}
+.popWrap .insLink {width:50%;margin:3% auto 0 auto;text-align:center;}
+.popWrap .insLink a {display:block;width:33.3%;margin:auto;}
+.popWrap .insLink a img {width:70%;}
+
+.andPopWrap h5 {width:42%;}
+
+
+/*POP e-mail*/
+.popWrap.emailPopWrap {padding:3% 3% 7% 3%;}
+.popWrap.emailPopWrap p {font-size:20px;margin-bottom:3%;padding-left:3%;}
+.emailPopWrap input[type="email"] {border:1px solid #AAA;width:80%;height:40px;font-size:14px;line-height:40px;padding:10px;color:#777;background:#FFF;border-radius:5px;box-sizing:border-box;}
+.emailPopWrap .btnSend {display:inline-block;width:15%;height:40px;line-height:40px;background:#999;color:#FFF;font-size:14px;margin-left:1%;border-radius:5px;box-sizing:border-box;}
+
+
+@media all and (max-width: 720px) {
+	.mainWrap .top .txt {font-size:2vw;}
+	.wrap {width:96%;}
+	.topTitle h1 {font-size:5.5vw;}
+	.tabA ul li a {padding:0.5vw 0 0.2vw 0;;font-size:3vw;}
+	.tabB ul {padding:1vw;}
+	.tabB ul li a {font-size:3vw;}
+	.mainWrap .top .emailBtn {font-size:2vw;}
+	h2 {font-size:3.2vw;}
+	h3 {font-size:2.7vw;}
+	.bookTxt li {font-size:2.3vw;top:29.5vw;}
+	table {border-top:0.35vw solid #CCC;border-bottom:0.35vw solid #CCC;}
+	table th {font-size:2vw;border-bottom:0.4vw solid #CCC;text-align:center;}
+	table td {font-size:2vw;border-bottom:0.3vw solid #DDD;height:8vw;}
+	table td .txt {font-size:2vw;}
+	table td .tbTxt {font-size:1.6vw;}
+	.unitB table .danwon {font-size:2.4vw;}
+	.unitB table .danwon:after {width:1vw;height:1.1vw;}
+	.unit h3 {border-bottom:0.35vw solid #CCC;}
+	.txt {font-size:2.2vw;}
+	/*POP*/
+	.popWrap h4 {font-size:3.8vw;}
+	.popWrap h5 {border-radius:1.2vw;}
+	.errPopWrap>.btnTxt {font-size:3.3vw;}
+	.popWrap .moWrap {font-size:3.3vw;}
+	.popWrap .moWrap span {font-size:3.3vw;}
+	.popWrap h5 {font-size:3.2vw;}
+	.popWrap p {font-size:3vw;}
+	.popWrap ul {font-size:2.4vw;}
+	.popWrap .txt {font-size:1.9vw;}
+	.popWrap .errTxt {font-size:2.4vw;}
+	.popWrap.emailPopWrap p {font-size:3vw;}
+	/*POP e-mail*/
+	.emailPopWrap input[type="email"] {height:6vw;font-size:2vw;line-height:6vw;padding:1vw;border-radius:1vw;}
+	.emailPopWrap .btnSend {height:6vw;line-height:6vw;font-size:2vw;border-radius:1vw;}
+}

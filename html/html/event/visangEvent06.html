@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>비상 스페셜 키트 이벤트</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../../js/event/visangEvent06.js"></script>
+  <link rel="stylesheet" href="../../css/event/visangEvent06.css">
+</head>
+<body>
+	<!-- eventWrap -->
+	<!-- [PUB]: 해당 이벤트 건은 PC/MO 컨텐츠 width값 동일하여 한벌로 작업 -->
+	<div id="eventWrap">
+		<div class="top_menu">
+			<div class="logo">
+				<img src="../../img/event/visangEvent06/logo.png" alt="비상">
+			</div>
+			<div class="menu">
+				<div id="divLogIn">
+					<a href="javascript:void(0)" onclick="btnLogIn_Click" class="login">로그인</a><a href="javascript:void(0)" class="join">회원가입</a>
+				</div>
+				<div id="divLogOut" style="display:none">
+					<a href="javascript:void(0)" onclick="btnLogOut_Click" class="logout">로그아웃</a><a href="javascript:void(0)" class="modify">개인정보수정</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-01">
+			<div class="wrap">
+				<div class="blind">
+          <span>책 읽는 공부가 바삭해지는 비상 스페셜 키트</span>
+					<h1>비스킷을 잡아라!</h1>
+					<ul>
+						<li>이벤트 기간: 6.28(월)~7.25(일)</li>
+						<li>당첨자 발표: 7.29(목)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-02">
+			<div class="wrap">
+				<div class="blind">
+					<h2>2021년 NEW 비스킷</h2>
+					<p>비스킷은 비상교재&amp;맘앤톡 회원을 위해 준비한 비상교재의 굿즈(비상 스페셜 키트)입니다. 독서 테마로 더 새로워진 2021 비스킷을 기대해주세요!</p>
+					<strong>300명 추첨</strong>
+				</div>
+				<div class="goodsWrap">
+					<ul>
+						<li><img src="../../img/event/visangEvent06/goods01.png" alt="굿즈1"></li>
+						<li><img src="../../img/event/visangEvent06/goods02.png" alt="굿즈2"></li>
+					</ul>
+					<a class="preBtn" href="https://book7.visang.com/eventDtl/e210628.html#"><img src="../../img/event/visangEvent06/preBtn.png" alt="이전"></a>
+					<a class="nextBtn" href="https://book7.visang.com/eventDtl/e210628.html#"><img src="../../img/event/visangEvent06/nextBtn.png" alt="다음"></a>
+				</div>
+				<div class="btnWrap">
+					<a href="https://book.visang.com/event/biscuit.aspx" target="_blank"><img src="../../img/event/visangEvent06/pre_event_go.png" alt="지난 비스킷 보기"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="area-03">
+			<div class="wrap">
+				<div class="blind">
+					<h2>비스킷을 잡아라! 참여 방법</h2>
+					<p>비상교재 홈펜이지의 다양한 메뉴를 둘러보면서 비스킷을 찾고, 4개의 비스킷을 모두 잡아서 미션 완료하세요.</p>
+					<ul>
+						<li>1. 홈페이지의 여러 메뉴를 둘러보면서 비스킷을 찾는다!</li>
+						<li>2. 비스킷을 찾으면 클릭하여 비스킷을 잡는다!</li>
+						<li>3. 비스킷을 잡으면 비스킷이 내 손에!</li>
+					</ul>
+					<p>1개의 비스킷만 잡아도 이벤트에 자동 응모되며 경품 추첨의 대상이지만, <strong>4개의 비스킷을 모두 잡으면 당첨 확률이 높아집니다.</strong></p>
+				</div>
+				<div class="biscuitWrap">
+					<ul>
+						<!--클리어 시 li에 .clear 추가-->
+						<li class="clear"><span class="blind">힌트: 비상의 새로운 책을 만나보자!</span></li>
+						<li><span class="blind">힌트: 중등 교재 사용 후기를 한곳에서~</span></li>
+						<li><span class="blind">힌트: 날개도 쌓고, 지식도 쌓고!</span></li>
+						<li><span class="blind">힌트: 고등 교재를 확인하려면...?</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="area-04">
+			<div class="wrap">
+				<div class="blind">
+					<h2>비스킷을 모두 잡은 참여자에게 드리는 보너스 선물!</h2>
+					<p>비스킷 독서기록지를 다운로드 후 인쇄하여 활용하세요.</p>
+				</div>
+				<div class="btnWrap">
+					<button class="viewBtn"><img src="../../img/event/visangEvent06/view_btn.png" alt="비스킷 독서 기록지 미리보기"></button>
+					<a class="downBtn" href="https://book.visang.com/Download/e210628/%EB%8F%85%EC%84%9C%EA%B8%B0%EB%A1%9D%EC%9E%A5.pdf" target="_blank"><img src="../../img/event/visangEvent06/down_btn.png" alt="비스킷 독서 기록지 다운로드"></a>
+				</div>
+				<div class="scrapWrap">
+					<p class="blind">당첨 확률 높아지는 비스킷을 잡아라 이벤트 스크랩 하기</p>
+					<ul>
+						<li><a href="#"><img src="../../img/event/visangEvent06/band_ico.png" alt="밴드"></a></li>
+						<li><a href="#"><img src="../../img/event/visangEvent06/kakao_ico.png" alt="카카오톡"></a></li>
+						<li><a href="#"><img src="../../img/event/visangEvent06/facebook_ico.png" alt="페이스북"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="popWrap">
+				<a href="#" class="popClose1"><span class="blind">닫기</span></a>
+				<img src="../../img/event/visangEvent06/popViewImg.png" alt="비스킷 독서 기록지 미리보기">
+				<a href="#" class="popClose2"><span class="blind">닫기</span></a>
+			</div>
+		</div>
+
+		
+
+		<div class="area-05">
+			<div class="wrap">
+				<div class="blind">
+					<h2>비상교재 이벤트 만족도 조사</h2>
+					<p>본 이벤트의 경품, 참여 방법, 디자인 등 전반적인 만족도를 평가해주세요.</p>
+				</div>
+				<div class="estimation">
+					<div class="score_wrap">
+						<span class="score">
+							<a href="#a"><span class="blind">5</span></a>
+							<a href="#a"><span class="blind">4</span></a>
+							<a href="#a"><span class="blind">3</span></a>
+							<a href="#a"><span class="blind">2</span></a>
+							<a href="#a"><span class="blind">1</span></a>
+						</span>
+					</div>
+					<input type="text" name="" id="" class="i_txt" value="평가 이유 및 건의 사항을 작성해주세요. (30자 이내)">
+					<div class="btn">
+						<a href="#a"><img src="../../img/event/visangEvent06/btn_estimation.png" alt="평가하기"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="area-info">
+			<div class="wrap">
+				<div class="blind">
+					<h2>꼭 알아두세요!</h2>
+					<ul>
+						<li>개인정보가 확인되지 않는 경우 당첨이 취소될 수 있습니다.</li>
+						<li>동일한 개인정보로 당첨되었을 경우 당첨이 취소될 수 있습니다.</li>
+						<li>개인정보가 변경되어 받지 못한 경품은 재발송 되지 않습니다.</li>
+						<li>본 이벤트는 PC 및 모바일 모두 참여 가능합니다.</li>
+					</ul>
+				</div>
+				<a href="#a" class="btnPrivacy" target="_blank" title="새창열림"><span class="blind">개인정보확인</span></a>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="footer_inner">
+				<ul>
+					<li><a href="http://www.visang.com/" target="_blank">회사소개</a><span>|</span></li>
+					<li><a href="https://book.visang.com/customer/newsretrieve.aspx" target="_blank">고객센터</a><span>|</span></li>
+					<li><a href="https://book.visang.com/etc/sitemap.aspx" target="_blank">사이트맵</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/customer/contactus.aspx" target="_blank">오시는길</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/customer/subcompretrieve.aspx" target="_blank">지사안내</a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/member/privacy.aspx" target="_blank" class="privacy"><strong>개인정보처리방침</strong></a><span>|</span></li>
+					<li><a href="https://book.visang.com/book/member/agreement.aspx" target="_blank">이용약관</a></li>
+				</ul>
+				<p class="addr">(주)비상교육 | 주소 : 서울시 구로구 디지털로 33길 48 대륭포스트타워 7차 20층 | 대표자명 : 양태회<br>사업자등록번호 : 211-87-07735 | 통신판매업 신고번호 : 제 2006-02731호 | TEL : 1544-0554 | FAX : (02) 6970-6148<br>대표메일 : webmaster@visang.com</p>
+				<p class="copyright">Copyright ⓒ 비상교육. ALL rights reserved. <a href="#a" class="btn_myinfo" target="_blank">정보조회</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //eventWrap -->
+
+
+</body></html>

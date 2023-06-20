@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<title>초등 영어 I See Grammar 교사용</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="../../../js/digitalContents/nwFunc.js"></script>
+	<script src="../../../js/digitalContents/22eeisee/common.js"></script>
+	<link href="../../../css/reset.css" type="text/css" rel="stylesheet">
+	<link href="../../../css/font.css" type="text/css" rel="stylesheet">
+	<link href="../../../css/digitalContents/22eeisee/common.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="mainWrap">
+		<div class="top">
+			<h1><img src="../../../img/digitalContents/22eeisee/main_topTitle.png" alt="I See Grammar 시리즈 교사용 자료"></h1>
+			<a class="banner" href="https://book.visang.com/teacher/vocatestmaker.aspx?bc=BR002&amp;gd=M&amp;sc3=SJ002&amp;sc9=09&amp;dp=4" target="_blank"><img src="../../../img/digitalContents/22eeisee/banner.png"></a>
+			<button type="button" class="emailBtn"><img src="../../../img/digitalContents/22eeisee/emailBtn.jpg" alt="이메일로 링크보내기"></button>
+		</div>
+		<div class="cont">
+			<ul>
+				<li><a href="1page.html"><img src="../../../img/digitalContents/22eeisee/book1.jpg" alt="Level 1"></a></li>
+				<li><a href="2page.html"><img src="../../../img/digitalContents/22eeisee/book2.jpg" alt="Level 2"></a></li>
+				<li><a href="3page.html"><img src="../../../img/digitalContents/22eeisee/book3.jpg" alt="Level 3"></a></li>
+				<li><a href="4page.html"><img src="../../../img/digitalContents/22eeisee/book4.jpg" alt="Level 4"></a></li>
+			</ul>
+			<img class="mainLogo" src="../../../img/digitalContents/22eeisee/visang_logo.png" alt="비상로고">
+		</div>
+		<div class="popBg"></div>
+		<!--이메일 입력 팝업-->
+		<div class="emailPopWrap popWrap">
+			<a href="#" class="closeBtn"><img src="../../../img/digitalContents/22eeisee/popup_close.png" alt="닫기"></a>
+			<p>이메일주소를 입력하세요.</p>
+			<input type="email" id="txtMail" name="txtMail" placeholder="이메일을 입력하세요.">
+			<a href="#" id="btnSend" class="btnSend">전송</a>
+			<input type="hidden" id="hidSend" value="0">
+		</div>
+	</div>
+	<!-- <script>
+		$(function () {
+			$("#btnSend").click(function () {
+				if($("#hidSend").val() == "1")
+					alert("메일이 전송중입니다. 잠시만 기다려주세요.");
+				else{
+					$("#hidSend").val("1")
+					var formData = new FormData();
+
+					formData.append('mail', $("#txtMail").val());
+					formData.append('is', "https://www.visang.com/upload/contents/22eeisee/html/img/mailing.jpg");
+					formData.append('il', "https://www.visang.com/upload/contents/22eeisee/visang.html");
+					formData.append('tlt',"22 초등 영어_I See Grammar");
+					formData.append('ac', "B5084");
+					$.ajax({
+						type: "POST",
+						url: "https://book.visang.com/ajaxdata/mailsendqr.ashx",
+						contentType: false,
+						processData: false,
+						data: formData,
+						success: function (returnVal) {
+							if(returnVal.split('_')[0] == 1){
+								$(".popBg").hide();
+								$(".emailPopWrap").hide();
+							}
+							alert(returnVal.split('_')[1]);
+							$("#hidSend").val("0");
+						},
+						error: function (request, status, error) {
+							alert('메일발송 중 오류가 발생했습니다. 추후 다시 시도해 주세요.');
+							$(".popBg").hide();
+							$(".emailPopWrap").hide();
+							$("#hidSend").val("0");
+							return false;
+						}
+					});
+				}
+			});
+		});
+	</script> -->
+</body>
+</html>
